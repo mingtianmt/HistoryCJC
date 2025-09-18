@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>课程主页 — 作业集合</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -17,11 +17,17 @@
       <button id="clearBtn">清除</button>
     </div>
 
+    <!-- 1. 装饰图片 -->
+    <div class="banner">
+      <img src="assets/banner.jpg" alt="装饰图">
+    </div>
+
     <h2>搜索结果</h2>
     <ul id="results"></ul>
 
     <h2>所有作业</h2>
-    <ul id="all-list"></ul>
+    <!-- 2. 一行 3 个作业 -->
+    <ul id="all-list" class="grid-3"></ul>
   </div>
 
   <script src="search.js"></script>

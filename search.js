@@ -1,3 +1,5 @@
+
+
 const RESULTS = document.getElementById('results');
 const ALLLIST = document.getElementById('all-list');
 const INPUT = document.getElementById('searchInput');

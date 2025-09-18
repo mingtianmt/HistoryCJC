@@ -7,3 +7,28 @@ body { font-family: Arial, sans-serif; background:#f8f9fb; color:#222; padding:2
 .result-excerpt { color:#555; font-size:13px; margin-top:6px; }
 a.link { color:#0066cc; text-decoration:none; }
 a.link:hover { text-decoration:underline; }
+
+/* ========= 新增：装饰图 + 三栏网格 ========= */
+.banner img {
+    width: 100%;               /* 通栏宽度   */
+    height: auto;              /* 原比例     */
+    border-radius: 6px;        /* 圆角       */
+    margin: 10px 0 20px;       /* 上 10 下 20*/
+}
+
+.grid-3 {
+    display: flex;             /* 弹性布局   */
+    flex-wrap: wrap;           /* 自动换行   */
+    gap: 20px;                 /* 列间距     */
+    padding: 0;
+    list-style: none;
+}
+
+.grid-3 li {
+    flex: 0 0 calc(33.333% - 14px); /* 三列等宽，减去 gap 均分 */
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px;
+}
