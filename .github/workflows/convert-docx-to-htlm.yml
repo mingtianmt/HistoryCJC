@@ -5,9 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'assignments/source/**.docx'
-    paths-ignore:
-      - 'assignments/html/**'
-      - 'assignments/index.json'
+
 
 jobs:
   convert:
