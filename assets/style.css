@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; background:#f8f9fb; color:#222; padding:20px; }
+.container { max-width:900px; margin:0 auto; background:#fff; padding:24px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
+.search-box { display:flex; gap:8px; margin-bottom:12px; }
+.search-box input { flex:1; padding:8px 10px; font-size:16px; border:1px solid #ccc; border-radius:4px; }
+.search-box button { padding:8px 12px; font-size:14px; cursor:pointer; }
+#results li, #all-list li { margin:8px 0; padding:8px; border-radius:6px; background:#fafafa; list-style:none; }
+.result-excerpt { color:#555; font-size:13px; margin-top:6px; }
+a.link { color:#0066cc; text-decoration:none; }
+a.link:hover { text-decoration:underline; }

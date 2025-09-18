@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>课程主页 — 作业集合</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>课程主页</h1>
+    <p>在下方输入关键词以搜索作业（会在作业标题与内容摘录中查找）</p>
+
+    <div class="search-box">
+      <input id="searchInput" type="search" placeholder="输入关键词，回车或点击搜索">
+      <button id="searchBtn">搜索</button>
+      <button id="clearBtn">清除</button>
+    </div>
+
+    <h2>搜索结果</h2>
+    <ul id="results"></ul>
+
+    <h2>所有作业</h2>
+    <ul id="all-list"></ul>
+  </div>
+
+  <script src="search.js"></script>
+</body>
+</html>
