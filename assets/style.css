@@ -10,10 +10,12 @@ a.link:hover { text-decoration:underline; }
 
 /* ========= 新增：装饰图 + 三栏网格 ========= */
 .banner img {
-    width: 100%;               /* 通栏宽度   */
-    height: auto;              /* 原比例     */
-    border-radius: 6px;        /* 圆角       */
-    margin: 10px 0 20px;       /* 上 10 下 20*/
+    max-width: 300px;     /* 限制宽度 */
+    height: 100px;         /* 保持比例 */
+    object-fit: cover;   /* 或 contain，保证不变形 */
+    border-radius: 6px;
+    display: block;       /* 居中前提 */
+    margin: 10px auto 20px; /* 上 10 居中 下 20 */
 }
 
 .grid-3 {
