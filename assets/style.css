@@ -108,9 +108,9 @@ body {
 
 /* 让作业标题的链接看起来像普通标题 */
 .assignment-card a {
-  text-decoration: none; /* 去掉下划线 */
-  color: inherit;         /* 继承文字颜色 */
-  display: inline-block;  /* 确保h3占据块状空间 */
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
 
 .assignment-card p {
@@ -140,6 +140,25 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+/* 新增：带左侧图片的课堂 */
+.classroom-with-image {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  max-width: 900px; /* 放窄一点 */
+  margin: 20px auto; /* 居中 */
+}
+
+.classroom-image img {
+  width: 180px;  /* 左侧图片宽度 */
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.classroom-content {
+  flex: 1; /* 剩余空间给文字区域 */
 }
 
 .flipped-classroom p {
