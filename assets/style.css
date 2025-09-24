@@ -106,6 +106,13 @@ body {
   margin-bottom: 8px;
 }
 
+/* 让作业标题的链接看起来像普通标题 */
+.assignment-card a {
+  text-decoration: none; /* 去掉下划线 */
+  color: inherit;         /* 继承文字颜色 */
+  display: inline-block;  /* 确保h3占据块状空间 */
+}
+
 .assignment-card p {
   font-size: 14px;
   line-height: 1.6;
@@ -113,6 +120,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* detail-link 已不再使用，但保留样式不会影响其他部分 */
 .detail-link {
   display: inline-block;
   margin-top: 6px;
