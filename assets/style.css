@@ -18,7 +18,7 @@ body {
 }
 
 .site-title {
-  font-size: 22px;   /* 调小字号 */
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
 }
@@ -147,18 +147,23 @@ body {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  max-width: 900px; /* 放窄一点 */
-  margin: 20px auto; /* 居中 */
+  max-width: 900px;  /* 整体宽度放窄 */
+  margin: 20px auto;
+}
+
+.classroom-image {
+  flex-shrink: 0; /* 不被压缩 */
 }
 
 .classroom-image img {
-  width: 180px;  /* 左侧图片宽度 */
+  width: 180px;   /* 左侧图片宽度 */
+  height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
 
 .classroom-content {
-  flex: 1; /* 剩余空间给文字区域 */
+  flex: 1;        /* 剩余空间给文字区域 */
 }
 
 .flipped-classroom p {
@@ -166,4 +171,22 @@ body {
   line-height: 1.8;
   color: #444;
   margin-bottom: 12px;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .classroom-with-image {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .classroom-image img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+
+  .classroom-content {
+    text-align: center;
+  }
 }
