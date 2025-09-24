@@ -3,31 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>课程主页 — 作业集合</title>
+  <title>中国新闻传播史 教学网站</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <div class="container">
-    <h1>课程主页</h1>
-    <p>在下方输入关键词以搜索作业（会在作业标题与内容摘录中查找）</p>
-
-    <div class="search-box">
-      <input id="searchInput" type="search" placeholder="输入关键词，回车或点击搜索">
-      <button id="searchBtn">搜索</button>
-      <button id="clearBtn">清除</button>
+    <!-- 顶部标题区域 -->
+    <div class="header">
+      <h1 class="site-title">中国新闻传播史 教学网站</h1>
+      <h2 class="subtitle">中新史课程资料库</h2>
     </div>
 
-    <!-- 1. 装饰图片 -->
+    <!-- 搜索区域 -->
+    <div class="search-section">
+      <label class="search-label">搜索</label>
+      <div class="search-box">
+        <input id="searchInput" type="search" placeholder="输入关键词，回车或点击搜索">
+        <button id="searchBtn">搜索</button>
+        <button id="clearBtn">清除</button>
+      </div>
+    </div>
+
+    <!-- 插入图片 -->
     <div class="banner">
       <img src="assets/banner.jpg" alt="装饰图">
     </div>
 
+    <!-- 搜索结果 -->
     <h2>搜索结果</h2>
     <ul id="results"></ul>
 
-    <h2>所有作业</h2>
-    <!-- 2. 一行 3 个作业 -->
-    <ul id="all-list" class="grid-3"></ul>
+    <!-- 所有作业 -->
+    <h2>课堂作业</h2>
+    <div class="grid-3">
+      <div class="hw-item"><a href="hw1.html">作业一：新闻思想</a></div>
+      <div class="hw-item"><a href="hw2.html">作业二：报刊史料</a></div>
+      <div class="hw-item"><a href="hw3.html">作业三：传播实践</a></div>
+      <div class="hw-item"><a href="hw4.html">作业四：近代媒体</a></div>
+      <div class="hw-item"><a href="hw5.html">作业五：记者群体</a></div>
+      <div class="hw-item"><a href="hw6.html">作业六：女性新闻</a></div>
+      <div class="hw-item"><a href="hw7.html">作业七：思想与政治</a></div>
+      <div class="hw-item"><a href="hw8.html">作业八：中外传播</a></div>
+      <div class="hw-item"><a href="hw9.html">作业九：新闻实践</a></div>
+    </div>
+
+    <!-- 翻转课堂精选 -->
+    <div class="flipped-classroom">
+      <h2>
+        <img src="assets/icon.png" alt="图标" class="title-icon">
+        翻转课堂：研讨成果精选
+      </h2>
+      <div class="article-list">
+        <div class="article-item">
+          <a href="article1.html">晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</a>
+          <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
+        </div>
+        <div class="article-item">
+          <a href="article2.html">近代来华传教士的多重身份：走近美国传教士与“汉学之父”卫三畏（2023-09）</a>
+          <p>研究传教士在宗教、教育和学术方面的多重角色。体现跨文化交流的重要性。</p>
+        </div>
+        <div class="article-item">
+          <a href="article3.html">近代职业记者群的崛起：烽火玫瑰胡济邦（2024-08）</a>
+          <p>剖析胡济邦在新闻报道中的贡献。揭示记者群体在社会变革中的作用。</p>
+        </div>
+        <div class="article-item">
+          <a href="article4.html">近代职业记者群的崛起：民国女性新闻从业者的困境与出路（2023-02）</a>
+          <p>聚焦民国女性记者的生存环境。分析她们面对的挑战与发展机遇。</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="search.js"></script>

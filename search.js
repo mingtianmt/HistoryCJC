@@ -1,82 +1,89 @@
-
-
-const RESULTS = document.getElementById('results');
-const ALLLIST = document.getElementById('all-list');
-const INPUT = document.getElementById('searchInput');
-const BTN = document.getElementById('searchBtn');
-const CLEAR = document.getElementById('clearBtn');
-
-let indexData = [];
-
-// 加载 index.json 并渲染总列表
-async function loadIndex() {
-  try {
-    const res = await fetch('assignments/index.json', {cache: "no-cache"});
-    if (!res.ok) throw new Error('无法加载索引');
-    indexData = await res.json();
-    renderAll();
-  } catch (e) {
-    ALLLIST.innerHTML = '<li>未找到 assignments/index.json（尚未生成或未上传）</li>';
-    console.error(e);
+// 模拟数据：课堂作业 + 翻转课堂文章
+const data = [
+  {
+    title: "作业一：新闻思想",
+    url: "hw1.html",
+    desc: "探讨中国近代新闻思想的形成与发展。"
+  },
+  {
+    title: "作业二：报刊史料",
+    url: "hw2.html",
+    desc: "分析近代报刊中的史料价值和研究方法。"
+  },
+  {
+    title: "作业三：传播实践",
+    url: "hw3.html",
+    desc: "关注新闻传播的实际应用和影响。"
+  },
+  {
+    title: "晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）",
+    url: "article1.html",
+    desc: "探讨梁启超在新闻传播中的思想与实践。"
+  },
+  {
+    title: "近代来华传教士的多重身份：走近美国传教士与“汉学之父”卫三畏（2023-09）",
+    url: "article2.html",
+    desc: "研究传教士在宗教、教育和学术方面的多重角色。"
+  },
+  {
+    title: "近代职业记者群的崛起：烽火玫瑰胡济邦（2024-08）",
+    url: "article3.html",
+    desc: "剖析胡济邦在新闻报道中的贡献。"
+  },
+  {
+    title: "近代职业记者群的崛起：民国女性新闻从业者的困境与出路（2023-02）",
+    url: "article4.html",
+    desc: "聚焦民国女性记者的生存环境。"
   }
-}
+];
 
-function renderAll() {
-  ALLLIST.innerHTML = '';
-  if (!indexData.length) {
-    ALLLIST.innerHTML = '<li>暂无作业</li>';
+// 获取DOM元素
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+const clearBtn = document.getElementById("clearBtn");
+const results = document.getElementById("results");
+
+// 搜索函数
+function search() {
+  const keyword = searchInput.value.trim();
+  results.innerHTML = ""; // 清空旧结果
+
+  if (keyword === "") {
+    results.innerHTML = "<li>请输入关键词进行搜索。</li>";
     return;
   }
-  for (const item of indexData) {
-    const li = document.createElement('li');
-    li.innerHTML = `<a class="link" href="${item.url}" target="_blank">${escapeHtml(item.title)}</a>
-                    <div class="result-excerpt">${escapeHtml(item.excerpt)}</div>`;
-    ALLLIST.appendChild(li);
-  }
-}
 
-function doSearch() {
-  const q = INPUT.value.trim().toLowerCase();
-  RESULTS.innerHTML = '';
-  if (!q) {
-    RESULTS.innerHTML = '<li>请输入关键词后搜索。</li>';
-    return;
-  }
-  const hits = indexData.filter(item =>
-    (item.title && item.title.toLowerCase().includes(q)) ||
-    (item.excerpt && item.excerpt.toLowerCase().includes(q))
+  // 过滤匹配结果
+  const matched = data.filter(item =>
+    item.title.includes(keyword) || item.desc.includes(keyword)
   );
-  if (!hits.length) {
-    RESULTS.innerHTML = '<li>未找到相关作业</li>';
+
+  if (matched.length === 0) {
+    results.innerHTML = "<li>没有找到匹配的内容。</li>";
     return;
   }
-  for (const item of hits) {
-    const li = document.createElement('li');
-    li.innerHTML = `<a class="link" href="${item.url}" target="_blank">${escapeHtml(item.title)}</a>
-                    <div class="result-excerpt">${highlight(escapeHtml(item.excerpt), q)}</div>
-                    <div><small>路径: <code>${escapeHtml(item.url)}</code></small></div>`;
-    RESULTS.appendChild(li);
+
+  // 插入搜索结果
+  matched.forEach(item => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${item.url}" target="_blank">${item.title}</a><p>${item.desc}</p>`;
+    results.appendChild(li);
+  });
+}
+
+// 清除函数
+function clearSearch() {
+  searchInput.value = "";
+  results.innerHTML = "";
+}
+
+// 事件绑定
+searchBtn.addEventListener("click", search);
+clearBtn.addEventListener("click", clearSearch);
+
+// 回车触发搜索
+searchInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    search();
   }
-}
-
-// 简单高亮（在 excerpt 中）
-function highlight(text, q) {
-  if (!q) return text;
-  const re = new RegExp(escapeRegExp(q), 'ig');
-  return text.replace(re, m => `<mark>${m}</mark>`);
-}
-
-function escapeHtml(s) {
-  if (!s) return '';
-  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
-function escapeRegExp(s) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-BTN.addEventListener('click', doSearch);
-INPUT.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
-CLEAR.addEventListener('click', () => { INPUT.value=''; RESULTS.innerHTML=''; });
-
-// load on start
-loadIndex();
+});

@@ -1,36 +1,170 @@
-body { font-family: Arial, sans-serif; background:#f8f9fb; color:#222; padding:20px; }
-.container { max-width:900px; margin:0 auto; background:#fff; padding:24px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
-.search-box { display:flex; gap:8px; margin-bottom:12px; }
-.search-box input { flex:1; padding:8px 10px; font-size:16px; border:1px solid #ccc; border-radius:4px; }
-.search-box button { padding:8px 12px; font-size:14px; cursor:pointer; }
-#results li, #all-list li { margin:8px 0; padding:8px; border-radius:6px; background:#fafafa; list-style:none; }
-.result-excerpt { color:#555; font-size:13px; margin-top:6px; }
-a.link { color:#0066cc; text-decoration:none; }
-a.link:hover { text-decoration:underline; }
+/* 全局样式 */
+body {
+  font-family: "Microsoft YaHei", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-/* ========= 新增：装饰图 + 三栏网格 ========= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 顶部标题 */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.site-title {
+  font-size: 2em;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* 搜索区 */
+.search-section {
+  margin: 20px 0;
+}
+
+.search-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-box button {
+  padding: 8px 16px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #00408a;
+}
+
+/* banner 图片 */
+.banner {
+  margin: 20px 0;
+  text-align: center;
+}
+
 .banner img {
-    max-width: 300px;     /* 限制宽度 */
-    height: 100px;         /* 保持比例 */
-    object-fit: cover;   /* 或 contain，保证不变形 */
-    border-radius: 6px;
-    display: block;       /* 居中前提 */
-    margin: 10px auto 20px; /* 上 10 居中 下 20 */
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
+/* 搜索结果 */
+#results {
+  list-style: none;
+  padding: 0;
+}
+
+#results li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 作业区（3列布局） */
 .grid-3 {
-    display: flex;             /* 弹性布局   */
-    flex-wrap: wrap;           /* 自动换行   */
-    gap: 20px;                 /* 列间距     */
-    padding: 0;
-    list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px 0;
 }
 
-.grid-3 li {
-    flex: 0 0 calc(33.333% - 14px); /* 三列等宽，减去 gap 均分 */
-    box-sizing: border-box;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    padding: 12px;
+.hw-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.hw-item:hover {
+  background-color: #f0f8ff;
+  transform: translateY(-3px);
+}
+
+.hw-item a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.hw-item a:hover {
+  text-decoration: underline;
+}
+
+/* 翻转课堂精选 */
+.flipped-classroom {
+  margin: 40px 0;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.flipped-classroom h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+.flipped-classroom .title-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.article-item a {
+  font-weight: bold;
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.article-item a:hover {
+  text-decoration: underline;
+}
+
+.article-item p {
+  margin: 5px 0 0 0;
+  font-size: 0.95em;
+  color: #555;
 }
