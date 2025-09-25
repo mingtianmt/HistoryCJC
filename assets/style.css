@@ -32,11 +32,14 @@ body {
   margin: 0;
 }
 
+/* 修改点1：副标题靠右，离右边距 20px */
 .subtitle {
   font-size: 16px;
   color: #666;
   margin: 0;
-  white-space: nowrap; /* 防止被折行或挤掉 */
+  align-self: flex-end; /* 靠右 */
+  margin-right: 20px;   /* 离右边距离 */
+  white-space: nowrap;
 }
 
 /* 搜索区域 */
@@ -139,6 +142,13 @@ body {
 
 .detail-link:hover {
   text-decoration: underline;
+}
+
+/* 修改点2：翻转课堂标题离左边距离 */
+.assignment-title {
+  margin-left: 60px; /* 距离左边 60px，可调 */
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 /* 翻转课堂 / 第二课堂 通用 */
