@@ -38,7 +38,7 @@ body {
   margin: 4px 80px 0 0;           /* 与主标题拉开一点垂直间距 */
   font-size: 16px;
   color: #666;
-  align-self: flex-end;        /* 靠右 */
+  align-self: center;        /* 靠右 */
 }
 
 /* 搜索区域 */
