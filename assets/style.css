@@ -38,7 +38,7 @@ body {
   color: #666;
   margin: 0;
   align-self: flex-end; /* 靠右 */
-  margin-right: 20px;   /* 离右边距离 */
+  margin-right: 5px;   /* 离右边距离 */
   white-space: nowrap;
 }
 
