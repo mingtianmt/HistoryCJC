@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>教学影片 - 中国新闻传播史 教学网站</title>
+  <title>第一课堂详情 - 中国新闻传播史 教学网站</title>
 
-  <!-- 数字博物馆风格样式 -->
+  <!-- 全部样式集中写在这里 -->
   <style>
     /* ---------- 0. 古籍纸纹变量 ---------- */
     :root{
@@ -70,14 +70,63 @@
       padding-left:40px;
     }
     .section-title::before{
-      content:'影';
+      content:'课';
       position:absolute;
       left:0;top:-8px;
       font-size:40px;
       opacity:.15;
     }
 
-    /* ---------- 5. 影片列表：宣纸卡片 ---------- */
+    /* ---------- 5. 教材详情：左图右文古籍对开 ---------- */
+    .two-column{
+      display:flex;
+      gap:30px;
+      margin-bottom:40px;
+      align-items:flex-start;
+    }
+    .two-column .left{
+      flex:4;
+    }
+    .two-column .left img{
+      width:100%;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      border:1px solid var(--cinnabar);
+      transition:transform .3s;
+    }
+    .two-column .left img:hover{transform:scale(1.02)}
+    .two-column .right{
+      flex:6;
+      font-size:16px;
+      color:#444;
+    }
+
+    /* ---------- 6. 数据库九宫格：活字印刷悬浮 ---------- */
+    .grid-3x3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      margin-bottom:40px;
+    }
+    .grid-item{
+      background:#fffef9;
+      border:1px solid var(--cinnabar);
+      border-radius:var(--radius);
+      padding:30px 20px;
+      text-align:center;
+      font-size:22px;
+      font-weight:bold;
+      color:var(--cinnabar);
+      box-shadow:var(--shadow);
+      transition:transform .3s,box-shadow .3s;
+      cursor:pointer;
+    }
+    .grid-item:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 20px rgba(0,0,0,.12);
+    }
+
+    /* ---------- 7. 课程/影片列表：宣纸卡片 ---------- */
     .section-list{
       display:flex;
       flex-direction:column;
@@ -108,10 +157,14 @@
       color:#444;
     }
 
-    /* ---------- 6. 响应式：手机竖排 ---------- */
+    /* ---------- 8. 响应式：手机竖排 ---------- */
     @media(max-width:768px){
-      .section-item{flex-direction:column;text-align:center}
+      .two-column,.section-item{flex-direction:column;text-align:center}
       .section-item img{width:100%;max-width:300px}
+      .grid-3x3{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:480px){
+      .grid-3x3{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -124,20 +177,82 @@
   </header>
 
   <main class="container">
-    <h2 class="section-title">教学影片</h2>
+    <h2 class="section-title">第一课堂：线上学习资料</h2>
 
+    <!-- 教材详情 -->
+    <h2 class="section-title">教材详情</h2>
+    <div class="two-column">
+      <div class="left">
+        <img src="../assets/c1.jpg" alt="教材封面">
+      </div>
+      <div class="right">
+        <p>本教材为中国新闻传播史课程料，便于学生自主研学和课堂讨论。</p>
+      </div>
+    </div>
+    <div class="two-column">
+      <div class="left">
+        <img src="../assets/c2.jpg" alt="教材封面">
+      </div>
+      <div class="right">
+        <p>本教材为中国新闻传播史资料，便于学生自主研学和课堂讨论。</p>
+      </div>
+    </div>
+    <div class="two-column">
+      <div class="left">
+        <img src="../assets/c3.jpg" alt="教材封面">
+      </div>
+      <div class="right">
+        <p>本教材为中国新闻传播考资料，便于学生自主研学和课堂讨论。</p>
+      </div>
+    </div>
+
+    <!-- 主要报刊数据库 -->
+    <h2 class="section-title">主要报刊数据库</h2>
+    <div class="grid-3x3">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+      <div class="grid-item">D</div>
+      <div class="grid-item">E</div>
+      <div class="grid-item">F</div>
+      <div class="grid-item">G</div>
+      <div class="grid-item">H</div>
+      <div class="grid-item">I</div>
+    </div>
+
+    <!-- 网络课程观摩 -->
+    <h2 class="section-title">网络课程观摩</h2>
+    <div class="section-list">
+      <div class="section-item">
+        <img src="../assets/c4.jpg" alt="课程1">
+        <div class="desc">课程观摩示例1：讲解晚清报人的新闻思想与政治实践。</div>
+      </div>
+      <div class="section-item">
+        <img src="../assets/c5.jpg" alt="课程2">
+        <div class="desc">课程观摩示例2：分析“新报”论在近代新闻史中的意义。</div>
+      </div>
+      <div class="section-item">
+        <img src="../assets/c6.jpg" alt="课程3">
+        <div class="desc">课程观摩示例3：学生研讨与教师点评结合的课堂录像。</div>
+      </div>
+    </div>
+
+    <!-- 教学影片 -->
+    <h2 class="section-title">教学影片</h2>
     <div class="section-list">
       <div class="section-item">
         <img src="../assets/c7.jpg" alt="影片1">
         <div class="desc">教学影片示例1：晚清报刊历史影像资料解析。</div>
       </div>
+
       <div class="section-item">
         <img src="../assets/c8.jpg" alt="影片2">
         <div class="desc">教学影片示例2：学生实地调研视频展示。</div>
-      </div>
+      </div>   <!-- ← 这里原来缺 </div> -->
+
       <div class="section-item">
-        <img src="../assets/c9.jpg" alt="影片3">
-        <div class="desc">教学影片示例3：课程专题讲座录像回顾。</div>
+         <img src="../assets/c9.jpg" alt="影片3">
+         <div class="desc">教学影片示例3：课程专题讲座录像回顾。</div>
       </div>
     </div>
   </main>
