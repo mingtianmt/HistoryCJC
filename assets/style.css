@@ -23,7 +23,7 @@ body {
   justify-content: flex-start;  /* 去掉 space-between */
   align-items: center;
   gap: 5px;                    /* 主副标题之间留 12px 缝，可再调 */
-  padding: 15px 0 15px 10px;    /* 左 10px，右 0 */
+  padding: 15px 5px 15px 10px;    /* 左 10px，右 0 */
   background-color: #fff;
   border-bottom: 2px solid #e0e0e0;
 }
