@@ -23,11 +23,12 @@ body {
   padding: 15px 20px;
 }
 
-/* 标题行：主标题在左，副标题在右 */
+/* 标题行：主标题在左，副标题在右（距离可调） */
 .title-row {
   display: flex;
-  justify-content: space-between;  /* 左右分布 */
-  align-items: center;             /* 垂直居中 */
+  justify-content: flex-start; /* ① 改成左对齐 */
+  align-items: center;
+  gap: 12px;                   /* ② 想多近就多近，12/8/6px 随你调 */
   width: 100%;
 }
 
