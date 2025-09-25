@@ -7,6 +7,17 @@
 
   <!-- 全部样式集中写在这里 -->
   <style>
+    /* ---------- 页面基础 ---------- */
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      /* 给固定头部让出空间，防止内容被遮挡 */
+      padding-top: 80px;
+    }
+
     /* ========= 顶部固定header ========= */
     .header {
       position: fixed;
@@ -27,7 +38,9 @@
       font-size: 20px;
       font-weight: bold;
       align-self: flex-start;
+      color: #333;              /* 深灰黑 */
     }
+
     .subtitle {
       font-size: 16px;
       color: #666;
@@ -36,19 +49,13 @@
     }
 
     /* ========= 其余原有样式（仅把 body 的 padding-top 调大，给固定 header 腾地方） ========= */
-    body {
-      font-family: "Microsoft YaHei", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      padding-top: 90px; /* 原来是 80px，header 变高了一点，留 90px 更保险 */
-    }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px 40px;
     }
+
     h2.section-title {
       font-size: 22px;
       margin: 30px 0 15px 0;
@@ -146,10 +153,8 @@
 <body>
   <!-- 顶部固定header -->
   <div class="header">
-    <div class="title-row">
-      <h1 class="site-title">中国新闻传播史 教学网站</h1>
-      <h2 class="subtitle">中新史课程资料库</h2>
-    </div>
+    <h1 class="site-title">中国新闻传播史 教学网站</h1>
+    <h2 class="subtitle">中新史课程资料库</h2>
   </div>
 
   <div class="container">
