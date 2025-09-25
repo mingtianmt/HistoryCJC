@@ -23,11 +23,12 @@ body {
   padding: 15px 20px;
 }
 
-/* 标题行：让主副标题在一行 */
+/* 标题行：主标题在左，副标题在右 */
 .title-row {
   display: flex;
-  align-items: center;
-  gap: 38px;   /* 主副标题之间的空隙，可调 */
+  justify-content: space-between;  /* 左右分布 */
+  align-items: center;             /* 垂直居中 */
+  width: 100%;
 }
 
 /* 主标题 */
@@ -35,6 +36,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   margin: 0;
+  white-space: nowrap; /* 避免换行 */
 }
 
 /* 副标题 */
@@ -42,9 +44,8 @@ body {
   font-size: 18px;
   color: #666;
   margin: 0;
-  white-space: nowrap;  /* 避免换行 */
+  white-space: nowrap; /* 避免换行 */
 }
-
 
 /* 搜索区域 */
 .search-section {
@@ -196,6 +197,12 @@ body {
 
 /* 响应式优化 */
 @media (max-width: 768px) {
+  .title-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
   .classroom-with-image {
     flex-direction: column;
     align-items: center;
