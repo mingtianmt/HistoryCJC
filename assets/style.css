@@ -194,25 +194,3 @@ body{
   .classroom-image img{width:100%;max-width:300px}
 }
 
-/* 标题与“更多+”同一行 */
-.assignment-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 20px;   /* 原下边距移到这里 */
-  font-size: 22px;       /* 原字号保持 */
-  color: #333;           /* 与正文主色一致 */
-}
-
-/* “更多+”样式 */
-.more-link {
-  font-size: 15px;              /* 比标题小一点 */
-  color: #e60012;               /* 沿用 banner 主色调 */
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color .3s;
-}
-
-.more-link:hover {
-  border-bottom-color: #e60012; /* 悬停出现下划线 */
-}
