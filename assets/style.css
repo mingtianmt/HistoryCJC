@@ -27,7 +27,7 @@ body {
 .title-row {
   display: flex;
   align-items: center;
-  gap: 20px;   /* 主副标题之间的空隙，可调 */
+  gap: 30px;   /* 主副标题之间的空隙，可调 */
 }
 
 /* 主标题 */
