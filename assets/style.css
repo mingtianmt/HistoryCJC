@@ -37,7 +37,7 @@ body {
 .subtitle {
   font-size: 16px;
   color: #666;
-  margin: 4px 0 0 80px;           /* 与主标题拉开一点垂直间距 */
+  margin: 4px 0 0 800px;           /* 与主标题拉开一点垂直间距 */
   align-self: flex-start;      /* 靠左 */
 }
 
