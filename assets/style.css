@@ -85,7 +85,7 @@ body {
   font-size: 20px;
 }
 
-/* 作业卡片 */
+/* 作业卡片：三行三列 */
 .assignment-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -98,7 +98,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
 .assignment-card h3 {
@@ -106,7 +106,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* 让作业标题的链接看起来像普通标题 */
 .assignment-card a {
   text-decoration: none;
   color: inherit;
@@ -120,7 +119,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* detail-link 已不再使用，但保留样式不会影响其他部分 */
 .detail-link {
   display: inline-block;
   margin-top: 6px;
@@ -133,37 +131,43 @@ body {
   text-decoration: underline;
 }
 
-/* 翻转课堂 / 第二课堂 */
+/* 翻转课堂 / 第二课堂 通用 */
 .flipped-classroom {
   background: #fff;
   margin: 20px 40px;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* 新增：带左侧图片的课堂 */
+/* 左侧图片 + 右侧内容 */
 .classroom-with-image {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  max-width: 900px;  /* 整体宽度放窄 */
+  max-width: 900px;
   margin: 20px auto;
 }
 
 .classroom-image {
-  flex-shrink: 0; /* 不被压缩 */
+  flex-shrink: 0;
 }
 
 .classroom-image img {
-  width: 180px;   /* 左侧图片宽度 */
+  width: 180px;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
 
 .classroom-content {
-  flex: 1;        /* 剩余空间给文字区域 */
+  flex: 1;
+}
+
+.classroom-content h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .flipped-classroom p {
