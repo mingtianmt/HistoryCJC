@@ -5,8 +5,7 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
-  /* ① 给固定头部让出空间，防止内容被遮挡 */
-  padding-top: 80px;
+  padding-top: 100px; /* 给固定头部让出空间 */
 }
 
 /* 顶部标题区域：固定定位 */
@@ -19,25 +18,24 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
   background-color: #fff;
   border-bottom: 2px solid #e0e0e0;
-
-  padding: 15px 10px;
+  padding: 15px 20px;
+  box-sizing: border-box;
 }
 
-/* 标题行：主标题在左，副标题在右（距离可调） */
+/* 标题行：主标题在上，副标题在下 */
 .title-row {
   display: flex;
-  justify-content: flex-start; /* ① 改成左对齐 */
-  align-items: center;
-  gap: 6px;                   /* ② 想多近就多近，12/8/6px 随你调 */
-  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 /* 主标题 */
 .site-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
-  white-space: nowrap; /* 避免换行 */
+  white-space: normal;
 }
 
 /* 副标题 */
@@ -45,7 +43,7 @@ body {
   font-size: 18px;
   color: #666;
   margin: 0;
-  white-space: nowrap; /* 避免换行 */
+  white-space: normal;
 }
 
 /* 搜索区域 */
@@ -199,9 +197,8 @@ body {
 /* 响应式优化 */
 @media (max-width: 768px) {
   .title-row {
-    flex-direction: column;
     align-items: center;
-    gap: 6px;
+    text-align: center;
   }
 
   .classroom-with-image {
@@ -217,5 +214,9 @@ body {
 
   .classroom-content {
     text-align: center;
+  }
+
+  .assignment-grid {
+    grid-template-columns: 1fr;
   }
 }
