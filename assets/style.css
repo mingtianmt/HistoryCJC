@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
-  padding-top: 100px; /* 给固定头部让出空间 */
+  padding-top: 80px; /* 给固定头部让出空间 */
 }
 
 /* 顶部标题区域：固定定位 */
@@ -22,28 +22,34 @@ body {
   box-sizing: border-box;
 }
 
-/* 标题行：主标题在上，副标题在下 */
+/* 标题行：主标题和副标题分别单独一行 */
 .title-row {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
+  gap: 4px;
+  width: 100%;
 }
 
-/* 主标题 */
+/* 主标题：第一行靠左 */
 .site-title {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
-  white-space: normal;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* 副标题 */
+/* 副标题：第二行靠右 */
 .subtitle {
   font-size: 18px;
   color: #666;
   margin: 0;
-  white-space: normal;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* 搜索区域 */
@@ -197,7 +203,10 @@ body {
 /* 响应式优化 */
 @media (max-width: 768px) {
   .title-row {
-    align-items: center;
+    text-align: center;
+  }
+
+  .subtitle {
     text-align: center;
   }
 
