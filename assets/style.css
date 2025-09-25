@@ -194,35 +194,22 @@ body{
   .classroom-image img{width:100%;max-width:300px}
 }
 
-/* ===== 更多+ 卡片：与作业卡片同风格 ===== */
-.more-card{
-  /* 沿用 assignment-card 同套变量 */
-  background:#fffef9;
-  border:1px solid var(--theme-red);
-  border-radius:var(--radius);
-  padding:24px;
-  box-shadow:var(--shadow);
-  transition:transform .3s,box-shadow .3s;
-  position:relative;
-  overflow:hidden;
-  text-align:center;
-  font-family:'FangZhengBangShu',serif;
-  font-size:20px;
-  color:var(--theme-red);
-  text-decoration:none;
+/* ===== 更多+ 按钮：小巧风格 ===== */
+.assignment-title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-/* 左侧刷墨动画同源 */
-.more-card::before{
-  content:'';
-  position:absolute;
-  left:0;top:0;width:4px;height:100%;
-  background:var(--theme-red);
-  transform:scaleY(0);
-  transform-origin:top;
-  transition:transform .4s;
+
+.more-link {
+  font-size: 16px;
+  color: var(--theme-red);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
 }
-.more-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+.more-link:hover {
+  border-bottom-color: var(--theme-red);
 }
-.more-card:hover::before{transform:scaleY(1)}
