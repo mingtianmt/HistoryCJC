@@ -10,19 +10,20 @@ body {
 }
 
 /* 顶部标题区域：固定定位 */
+/* 顶部标题区域：固定定位 */
 .header {
-  /* ② 以下 4 行为新增固定所需 */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;                /* 保证在最上层 */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .08); /* 可选阴影，更醒目 */
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;  /* 去掉 space-between */
   align-items: center;
-  padding: 15px 0px 15px 10px; /* 上右下左 */
+  gap: 12px;                    /* 主副标题之间留 12px 缝，可再调 */
+  padding: 15px 0 15px 10px;    /* 左 10px，右 0 */
   background-color: #fff;
   border-bottom: 2px solid #e0e0e0;
 }
