@@ -10,7 +10,6 @@ body {
 }
 
 /* 顶部标题区域：固定定位 */
-/* 顶部标题区域：固定定位 */
 .header {
   position: fixed;
   top: 0;
@@ -20,22 +19,21 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
 
   display: flex;
-  justify-content: flex-start;  /* 去掉 space-between */
+  justify-content: space-between;  /* 让左标题和右标题分开 */
   align-items: center;
-  gap: 5px;                    /* 主副标题之间留 12px 缝，可再调 */
-  padding: 15px 20px 15px 10px;    /* 左 10px，右 0 */
+  padding: 15px 20px;    /* 左右各 20px */
   background-color: #fff;
   border-bottom: 2px solid #e0e0e0;
 }
 
 .site-title {
-  font-size: 22px;
+  font-size: 20px;       /* 比原来小一点 */
   font-weight: bold;
   margin: 0;
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 16px;
   color: #666;
   margin: 0;
 }
