@@ -4,19 +4,114 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>翻转课堂全部成果 | 中国新闻传播史教学网站</title>
-  <link rel="stylesheet" href="assets/style.css">
+
   <style>
-    /* 独立补充：让卡片网格 4 列居中，限制最大宽度 */
+    /* ---------- 0. 古籍纸纹变量 ---------- */
+    :root{
+      --paper:#F5F2E8;
+      --ink:#1E1E1E;
+      --cinnabar:#9B1D2B;
+      --gold:#C9A145;
+      --radius:8px;
+      --shadow:0 4px 12px rgba(0,0,0,.08);
+    }
+
+    /* ---------- 1. 基础重置 ---------- */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:"思源黑体","Microsoft YaHei",sans-serif;
+      background:var(--paper) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity=".04"><rect fill="%239B1D2B" x="0" y="0" width="1" height="100"/></svg>');
+      color:var(--ink);
+      padding-top:100px;          /* 为固定 header 让位 */
+      line-height:1.8;
+    }
+
+    /* ---------- 2. 顶部卷轴 header ---------- */
+    .header{
+      position:fixed;
+      top:0;left:0;right:0;
+      z-index:999;
+      background:#fffef9;
+      border-bottom:2px solid var(--cinnabar);
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      padding:18px 5vw;
+    }
+    .site-title{
+      font-family:FangZhengBangShu,serif;
+      font-size:28px;
+      letter-spacing:4px;
+      color:var(--cinnabar);
+    }
+    .subtitle{
+      align-self:flex-end;
+      font-size:16px;
+      color:var(--ink);
+      opacity:.8;
+      margin-top:4px;
+    }
+
+    /* ---------- 3. 容器 ---------- */
     .more-wrapper{
       max-width:1200px;
       margin:0 auto;
-      padding:0 5vw 60px;
+      padding:20px 5vw 60px;
     }
+
+    /* ---------- 4. 章节标题：竖排小篆前饰 ---------- */
+    .section-title{
+      position:relative;
+      margin:40px 0 30px;
+      font-family:FangZhengBangShu,serif;
+      font-size:26px;
+      color:var(--cinnabar);
+      padding-left:40px;
+    }
+    .section-title::before{
+      content:'研';
+      position:absolute;
+      left:0;top:-8px;
+      font-size:40px;
+      opacity:.15;
+    }
+
+    /* ---------- 5. 作业卡片：宣纸活字悬浮 ---------- */
     .assignment-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:24px;
     }
+    .assignment-card{
+      background:#fffef9;
+      border:1px solid var(--cinnabar);
+      border-radius:var(--radius);
+      padding:30px 20px;
+      box-shadow:var(--shadow);
+      transition:transform .3s,box-shadow .3s;
+      display:flex;
+      flex-direction:column;
+    }
+    .assignment-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 20px rgba(0,0,0,.12);
+    }
+    .assignment-card a{
+      text-decoration:none;
+      color:var(--cinnabar);
+    }
+    .assignment-card h3{
+      font-size:18px;
+      margin-bottom:12px;
+      line-height:1.5;
+    }
+    .assignment-card p{
+      font-size:14px;
+      color:#444;
+      flex:1;
+    }
+
+    /* ---------- 6. 响应式 ---------- */
     @media(max-width:1024px){
       .assignment-grid{grid-template-columns:repeat(2,1fr)}
     }
@@ -25,9 +120,9 @@
     }
   </style>
 </head>
-<body>
 
-  <!-- 顶部导航：与首页同源 -->
+<body>
+  <!-- 顶部卷轴 -->
   <header class="header">
     <h1 class="site-title">中国新闻传播史教学网站</h1>
     <p class="subtitle">翻转课堂 · 全部成果</p>
@@ -35,7 +130,7 @@
 
   <!-- 正文区域 -->
   <div class="more-wrapper">
-    <h2 class="assignment-title">翻转课堂：全部研讨成果</h2>
+    <h2 class="section-title">翻转课堂：全部研讨成果</h2>
 
     <div class="assignment-grid">
       <!-- 1 -->
@@ -129,7 +224,7 @@
       <!-- 12 -->
       <article class="assignment-card">
         <a href="assignments/html/L.html" target="_blank">
-          <h3>“小报”大能量：晚清<申报>副刊与都市文化消费（2024-05）</h3>
+          <h3>“小报”大能量：晚清&lt;申报&gt;副刊与都市文化消费（2024-05）</h3>
         </a>
         <p>从副刊内容、广告与读者互动切入，解读近代都市文化消费的浮现。</p>
       </article>
