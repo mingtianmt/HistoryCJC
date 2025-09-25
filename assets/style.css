@@ -5,7 +5,7 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
-  padding-top: 80px; /* 给固定头部让出空间 */
+  padding-top: 100px; /* 给固定头部让出空间 */
 }
 
 /* 顶部标题区域：固定定位 */
@@ -22,34 +22,24 @@ body {
   box-sizing: border-box;
 }
 
-/* 标题行：主标题和副标题分别单独一行 */
+/* 标题行：主标题靠左，副标题靠右 */
 .title-row {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  width: 100%;
 }
 
-/* 主标题：第一行靠左 */
 .site-title {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
   text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* 副标题：第二行靠右 */
 .subtitle {
   font-size: 18px;
   color: #666;
   margin: 0;
   text-align: right;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* 搜索区域 */
@@ -96,6 +86,13 @@ body {
   width: 100%;
   border-radius: 8px;
   margin-top: 10px;
+}
+
+/* 翻转课堂标题 */
+.assignment-title {
+  margin-left: 60px;
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 /* 搜索结果 */
@@ -157,7 +154,7 @@ body {
 /* 翻转课堂 / 第二课堂 通用 */
 .flipped-classroom {
   background: #fff;
-  margin: 20px 40px 20px 80px; /* 上 20px，右 40px，下 20px，左 80px 留空位 */
+  margin: 20px 40px 20px 80px; /* 左边留空80px */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
@@ -169,7 +166,7 @@ body {
   gap: 20px;
   align-items: flex-start;
   max-width: 900px;
-  margin: 20px auto;
+  margin: 0; /* 内部用 padding/margin 由 .flipped-classroom 控制 */
 }
 
 .classroom-image {
@@ -203,10 +200,7 @@ body {
 /* 响应式优化 */
 @media (max-width: 768px) {
   .title-row {
-    text-align: center;
-  }
-
-  .subtitle {
+    align-items: center;
     text-align: center;
   }
 
@@ -227,5 +221,15 @@ body {
 
   .assignment-grid {
     grid-template-columns: 1fr;
+  }
+
+  .assignment-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .flipped-classroom {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
