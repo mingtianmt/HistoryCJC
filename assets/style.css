@@ -10,6 +10,7 @@ body {
 }
 
 /* 顶部标题区域：固定定位 */
+/* 顶部固定条 */
 .header {
   position: fixed;
   top: 0;
@@ -17,28 +18,28 @@ body {
   width: 100%;
   z-index: 999;
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
-
-  display: flex;
-  justify-content: space-between;  /* 让左标题和右标题分开 */
-  align-items: center;
-  padding: 15px 20px;    /* 左右各 20px */
-  background-color: #fff;
+  background: #fff;
   border-bottom: 2px solid #e0e0e0;
+  padding: 15px 40px;          /* 左右各留 40 px 视觉边距，可自己调 */
+  display: flex;
+  flex-direction: column;      /* 上下两行 */
 }
 
+/* 主标题第一行，靠左 */
 .site-title {
-  font-size: 20px;       /* 比原来小一点 */
-  font-weight: bold;
   margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: flex-start;      /* 靠左 */
 }
 
-/* 修改点1：副标题靠右，离右边距 20px */
+/* 副标题第二行，靠右 */
 .subtitle {
-  margin-left: auto;
-  margin-right: 20px;
+  margin: 4px 0 0 0;           /* 与主标题拉开一点垂直间距 */
   font-size: 16px;
   color: #666;
   white-space: nowrap;
+  align-self: flex-end;        /* 靠右 */
 }
 
 /* 搜索区域 */
