@@ -38,7 +38,6 @@ body {
   margin: 4px 40px 0 0;           /* 与主标题拉开一点垂直间距 */
   font-size: 16px;
   color: #666;
-  white-space: nowrap;
   align-self: flex-end;        /* 靠右 */
 }
 
