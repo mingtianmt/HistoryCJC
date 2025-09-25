@@ -5,10 +5,20 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
+  /* ① 给固定头部让出空间，防止内容被遮挡 */
+  padding-top: 80px;
 }
 
-/* 顶部标题区域 */
+/* 顶部标题区域：固定定位 */
 .header {
+  /* ② 以下 4 行为新增固定所需 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;                /* 保证在最上层 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .08); /* 可选阴影，更醒目 */
+
   display: flex;
   justify-content: space-between;
   align-items: center;
