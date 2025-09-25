@@ -17,27 +17,34 @@ body {
   width: 100%;
   z-index: 999;
   box-shadow: 0 2px 6px rgba(0,0,0,.08);
-
-  display: flex;
-  justify-content: space-between;  /* 让左标题和右标题分开 */
-  align-items: center;
-  padding: 15px 40px;    /* 左右各 20px */
   background-color: #fff;
   border-bottom: 2px solid #e0e0e0;
+
+  padding: 15px 20px;
 }
 
+/* 标题行：让主副标题在一行 */
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;   /* 主副标题之间的空隙，可调 */
+}
+
+/* 主标题 */
 .site-title {
-  font-size: 20px;       /* 比原来小一点 */
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
 }
 
+/* 副标题 */
 .subtitle {
-  font-size: 16px;
+  font-size: 18px;
   color: #666;
   margin: 0;
-  white-space: nowrap; /* 防止被折行或挤掉 */
+  white-space: nowrap;  /* 避免换行 */
 }
+
 
 /* 搜索区域 */
 .search-section {
