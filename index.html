@@ -5,8 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>中国新闻传播史 教学网站</title>
   <link rel="stylesheet" href="assets/style.css">
+  <style>
+    /* 新增：让 8 张卡片呈 2×4 网格，右下角留空给“更多+” */
+    .assignment-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);   /* 四列 */
+      grid-template-rows: repeat(2, 1fr);      /* 两行 */
+      gap: 20px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    /* “更多+”卡片样式：放在第 2 行第 4 列（网格末尾） */
+    .more-card {
+      grid-column: 4;
+      grid-row: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafafa;
+      border: 2px dashed #ccc;
+      border-radius: 6px;
+      font-size: 18px;
+      color: #e60012;
+      text-decoration: none;
+      transition: .3s;
+    }
+    .more-card:hover {
+      background: #f0f0f0;
+      border-color: #e60012;
+    }
+  </style>
 </head>
 <body>
+
   <!-- 顶部导航 -->
   <header class="header">
     <h1 class="site-title">中国新闻传播史教学网站</h1>
@@ -34,7 +65,7 @@
     <ul id="results"></ul>
   </section>
 
-  <!-- 翻转课堂 -->
+  <!-- 翻转课堂：仅保留 8 项 + 更多+ -->
   <h2 class="assignment-title">翻转课堂：研讨成果精选</h2>
   <div class="assignment-grid">
     <!-- A -->
@@ -101,13 +132,8 @@
       <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
     </article>
 
-    <!-- I -->
-    <article class="assignment-card">
-      <a href="assignments/html/I.html" target="_blank">
-        <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-      </a>
-      <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-    </article>
+    <!-- 更多+ -->
+    <a class="more-card" href="assignments/html/more.html" target="_blank">更多+</a>
   </div>
 
   <!-- 第一课堂 -->
