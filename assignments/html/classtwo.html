@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>第二课堂详情 - 中国新闻传播史 教学网站</title>
 
-  <!-- ===== 统一样式：直接复制第一课堂详情页的 header 及基础设置 ===== -->
   <style>
-    /* ---------- 顶部固定 header（与第一课堂页完全一致） ---------- */
+    /* ---------- 页面基础 ---------- */
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      /* 给固定头部让出空间，防止内容被遮挡 */
+      padding-top: 80px;
+    }
+
+    /* ---------- 顶部固定 header（悬挂两行文字） ---------- */
     .header {
       position: fixed;
       top: 0;
@@ -22,35 +32,32 @@
       flex-direction: column;
       box-sizing: border-box;
     }
+
+    /* 第一行：主标题 */
     .site-title {
       margin: 0;
       font-size: 20px;
       font-weight: bold;
-      align-self: flex-start;
-    }
-    .subtitle {
-      font-size: 16px;
-      color: #666;
-      margin: 4px 100px 0 0;
-      align-self: flex-end;
+      align-self: flex-start;   /* 靠左 */
+      color: #333;              /* 深灰黑 */
     }
 
-    /* ---------- 页面基础 ---------- */
-    body {
-      font-family: "Microsoft YaHei", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      padding-top: 90px; /* 给固定 header 留空间 */
+    /* 第二行：副标题 */
+    .subtitle {
+      font-size: 16px;
+      color: #666;              /* 浅灰色 */
+      margin: 4px 100px 0 0;    /* 上 4px、右 100px、下 0、左 0 */
+      align-self: flex-end;     /* 靠右 */
     }
+
+    /* ---------- 主体容器 ---------- */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px 40px;
     }
 
-    /* ---------- 板块标题（与第一课堂页一致） ---------- */
+    /* ---------- 板块标题 ---------- */
     h2.section-title {
       font-size: 22px;
       margin: 30px 0 15px 0;
