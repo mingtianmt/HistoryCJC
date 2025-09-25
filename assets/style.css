@@ -35,7 +35,7 @@ body {
 
 /* 副标题第二行，靠右 */
 .subtitle {
-  margin: 4px 0 0 0;           /* 与主标题拉开一点垂直间距 */
+  margin: 4px 40px 0 0;           /* 与主标题拉开一点垂直间距 */
   font-size: 16px;
   color: #666;
   white-space: nowrap;
