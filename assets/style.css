@@ -1,216 +1,195 @@
-/* 页面基础样式 */
-body {
-  font-family: "Microsoft YaHei", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-  /* ① 给固定头部让出空间，防止内容被遮挡 */
-  padding-top: 80px;
+/* ===== 0. 数字人文字体方案 ===== */
+@font-face{
+  font-family:'FangZhengBangShu';
+  src:url('https://cdn.jsdelivr.net/npm/@static-fonts/fangzheng-bangshu@1.0.0/FangZhengBangShuJianTi-1.ttf') format('truetype');
+}
+:root{
+  --theme-red:#9B1D2B;          /* 朱砂红 */
+  --theme-gray:#1E1E1E;        /* 深墨灰 */
+  --paper:#F5F2E8;             /* 古籍纸色 */
+  --gold:#C9A145;              /* 鎏金点缀 */
+  --radius:8px;
+  --shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
-/* 顶部标题区域：固定定位 */
-/* 顶部固定条 */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  box-shadow: 0 2px 6px rgba(0,0,0,.08);
-  background: #fff;
-  border-bottom: 2px solid #e0e0e0;
-  padding: 15px 40px;          /* 左右各留 40 px 视觉边距，可自己调 */
-  display: flex;
-  flex-direction: column;      /* 上下两行 */
+/* ===== 1. 基础重置 ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"思源黑体","Microsoft YaHei",sans-serif;
+  background:var(--paper);
+  color:var(--theme-gray);
+  padding-top:100px;            /* 为固定导航让位 */
+  line-height:1.75;
 }
 
-/* 主标题第一行，靠左 */
-.site-title {
-  margin: 0;
-  font-size: 20px;
-  font-weight: bold;
-  align-self: flex-start;      /* 靠左 */
+/* ===== 2. 顶部导航：宣纸卷轴效果 ===== */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:999;
+  background:#fffef9 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity=".04"><rect fill="%239B1D2B" x="0" y="0" width="1" height="100"/></svg>');
+  border-bottom:2px solid var(--theme-red);
+  box-shadow:var(--shadow);
+  display:flex;
+  flex-direction:column;
+  padding:18px 5vw;
+}
+.site-title{
+  font-family:'FangZhengBangShu',serif;
+  font-size:28px;
+  letter-spacing:4px;
+  color:var(--theme-red);
+}
+.subtitle{
+  align-self:flex-end;
+  font-size:16px;
+  color:var(--theme-gray);
+  opacity:.8;
+  margin-top:4px;
 }
 
-/* 副标题第二行，靠右 */
-.subtitle {
-  font-size: 16px;
-  color: #666;
-  margin: 4px 100px 0 0;           /* 与主标题拉开一点垂直间距 */
-  align-self: flex-end;      /* 靠左 */
+/* ===== 3. 搜索：宣纸圆角 ===== */
+.search-section{
+  padding:20px 5vw;
+}
+.search-box{
+  display:flex;
+  gap:12px;
+}
+.search-box input{
+  flex:1;
+  padding:12px 18px;
+  border:1px solid var(--theme-red);
+  border-radius:var(--radius);
+  background:#fffef9;
+  font-size:16px;
+  transition:.3s;
+}
+.search-box input:focus{
+  outline:none;box-shadow:0 0 0 3px rgba(155,29,43,.2);
+}
+.search-box button{
+  padding:12px 24px;
+  background:var(--theme-red);
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  cursor:pointer;
+  transition:.3s;
+}
+.search-box button:hover{background:#7a1621}
+#clearBtn{background:var(--gold)}
+#clearBtn:hover{background:#a8863f}
+
+/* ===== 4. Banner：古籍残卷圆角 ===== */
+.banner{
+  padding:0 5vw 20px;
+}
+.banner img{
+  width:100%;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
 }
 
-
-/* 搜索区域 */
-.search-section {
-  padding: 20px 40px;
+/* ===== 5. 翻转课堂标题：竖排小篆前饰 ===== */
+.assignment-title{
+  position:relative;
+  margin:40px 5vw 20px;
+  font-family:'FangZhengBangShu',serif;
+  font-size:26px;
+  color:var(--theme-red);
+  padding-left:40px;
+}
+.assignment-title::before{
+  content:'史';
+  position:absolute;
+  left:0;top:-8px;
+  font-size:40px;
+  opacity:.15;
 }
 
-.search-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
+/* ===== 6. 作业卡片：活字印刷悬浮 ===== */
+.assignment-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  padding:0 5vw;
 }
-
-.search-box {
-  display: flex;
-  gap: 10px;
+.assignment-card{
+  background:#fffef9;
+  border:1px solid var(--theme-red);
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:var(--shadow);
+  transition:transform .3s,box-shadow .3s;
+  position:relative;
+  overflow:hidden;
 }
-
-.search-box input {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+.assignment-card::before{            /* 刷墨动画 */
+  content:'';
+  position:absolute;
+  left:0;top:0;width:4px;height:100%;
+  background:var(--theme-red);
+  transform:scaleY(0);
+  transform-origin:top;
+  transition:transform .4s;
 }
-
-.search-box button {
-  padding: 10px 18px;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+.assignment-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
-
-.search-box button:hover {
-  background-color: #003d80;
+.assignment-card:hover::before{transform:scaleY(1)}
+.assignment-card h3{
+  font-size:18px;
+  margin-bottom:12px;
+  color:var(--theme-gray);
 }
-
-/* banner 图片 */
-.banner img {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
+.assignment-card p{
+  font-size:15px;
+  color:#555;
+  margin-bottom:12px;
 }
-
-/* 搜索结果 */
-#searchResults {
-  padding: 20px 40px;
+.detail-link{
+  display:inline-block;
+  margin-top:8px;
+  color:var(--theme-red);
+  font-weight:bold;
+  text-decoration:none;
+  border-bottom:2px solid transparent;
+  transition:.3s;
 }
+.detail-link:hover{border-bottom-color:var(--theme-red)}
 
-#searchResults h2 {
-  margin-bottom: 10px;
-  font-size: 20px;
+/* ===== 7. 第一/第二课堂：左图右文古籍对开 ===== */
+.flipped-classroom{
+  margin:40px 5vw;
+  background:#fffef9;
+  border:1px solid var(--theme-red);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:30px;
 }
-
-/* 作业卡片：三行三列 */
-.assignment-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px 40px;
+.classroom-with-image{
+  display:flex;
+  gap:30px;
+  align-items:center;
 }
-
-.assignment-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+.classroom-image img{
+  width:200px;
+  height:auto;
+  border-radius:var(--radius);
+  box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
-
-.assignment-card h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
+.classroom-content h2{
+  font-family:'FangZhengBangShu',serif;
+  font-size:22px;
+  color:var(--theme-red);
+  margin-bottom:12px;
 }
+.classroom-content p{margin-bottom:16px}
 
-.assignment-card a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-}
-
-.assignment-card p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.detail-link {
-  display: inline-block;
-  margin-top: 6px;
-  color: #0056b3;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.detail-link:hover {
-  text-decoration: underline;
-}
-
-/* 修改点2：翻转课堂标题离左边距离 */
-.assignment-title {
-  margin-left: 60px; /* 距离左边 60px，可调 */
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-/* 翻转课堂 / 第二课堂 通用 */
-.flipped-classroom {
-  background: #fff;
-  margin: 20px 40px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* 左侧图片 + 右侧内容 */
-.classroom-with-image {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  max-width: 900px;
-  margin: 20px auto;
-}
-
-.classroom-image {
-  flex-shrink: 0;
-}
-
-.classroom-image img {
-  width: 180px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.classroom-content {
-  flex: 1;
-}
-
-.classroom-content h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.flipped-classroom p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 12px;
-}
-
-/* 响应式优化 */
-@media (max-width: 768px) {
-  .classroom-with-image {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .classroom-image img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 15px;
-  }
-
-  .classroom-content {
-    text-align: center;
-  }
+/* ===== 8. 响应式：手机竖排 ===== */
+@media(max-width:768px){
+  .classroom-with-image{flex-direction:column;text-align:center}
+  .classroom-image img{width:100%;max-width:300px}
 }
