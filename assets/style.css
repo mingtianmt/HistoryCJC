@@ -22,24 +22,28 @@ body {
   box-sizing: border-box;
 }
 
-/* 标题行：主标题靠左，副标题靠右 */
+/* 标题行：主标题在上，副标题在下 */
 .title-row {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
 }
 
+/* 主标题 */
 .site-title {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
-  text-align: left;
+  white-space: normal;
 }
 
+/* 副标题 */
 .subtitle {
   font-size: 18px;
   color: #666;
   margin: 0;
-  text-align: right;
+  white-space: normal;
 }
 
 /* 搜索区域 */
@@ -86,13 +90,6 @@ body {
   width: 100%;
   border-radius: 8px;
   margin-top: 10px;
-}
-
-/* 翻转课堂标题 */
-.assignment-title {
-  margin-left: 60px; /* 左边留空 */
-  font-size: 22px;
-  margin-bottom: 15px;
 }
 
 /* 搜索结果 */
@@ -151,7 +148,7 @@ body {
   text-decoration: underline;
 }
 
-/* 翻转课堂 / 第二课堂保持原样 */
+/* 翻转课堂 / 第二课堂 通用 */
 .flipped-classroom {
   background: #fff;
   margin: 20px 40px;
@@ -201,11 +198,6 @@ body {
 @media (max-width: 768px) {
   .title-row {
     align-items: center;
-    text-align: center;
-  }
-
-  .assignment-title {
-    margin-left: 0;
     text-align: center;
   }
 
