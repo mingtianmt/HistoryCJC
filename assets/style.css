@@ -157,7 +157,7 @@ body {
 /* 翻转课堂 / 第二课堂 通用 */
 .flipped-classroom {
   background: #fff;
-  margin: 20px 40px;
+  margin: 20px 40px 20px 80px; /* 上 20px，右 40px，下 20px，左 80px 留空位 */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
