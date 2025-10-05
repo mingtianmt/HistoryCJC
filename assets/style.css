@@ -7,6 +7,10 @@
   font-family:'FZ-LiShu';
   src:url('https://cdn.jsdelivr.net/npm/@static-fonts/fangzheng-lishu@1.0.0/FangZhengBangShuJianTi-1.ttf') format('truetype');
 }
+@font-face{
+  font-family: 'PangMen';
+  src: url('https://cdn.jsdelivr.net/npm/pangmen-zhengdao-cushu@1.0.0/PangMenZhengDaoCuShuTi-1.ttf') format('truetype');
+}
 
 :root{
   --theme-red:#9B1D2B;          /* 朱砂红 */
@@ -43,11 +47,19 @@ body{
   padding:18px 5vw;
 }
 .site-title{
-  font-family:'FangZhengBangShu',serif;
   font-size:28px;
   letter-spacing:4px;
   color:var(--theme-red);
 }
+
+.site-title span:first-child{
+  font-family:'PangMen', serif;
+}
+
+.site-title span:last-child{
+  font-family:'FangZhengBangShu', serif;
+}
+
 .subtitle{
   align-self:flex-end;
   font-size:16px;
