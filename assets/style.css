@@ -3,7 +3,6 @@
   font-family:'FangZhengBangShu';
   src:url('https://cdn.jsdelivr.net/npm/@static-fonts/fangzheng-bangshu@1.0.0/FangZhengBangShuJianTi-1.ttf') format('truetype');
 }
-
 :root{
   --theme-red:#9B1D2B;          /* 朱砂红 */
   --theme-gray:#1E1E1E;        /* 深墨灰 */
@@ -112,8 +111,8 @@ body{
 /* ===== 6. 作业卡片：活字印刷悬浮 ===== */
 .assignment-grid{
   display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
   padding:0 5vw;
 }
 .assignment-card{
@@ -126,7 +125,7 @@ body{
   position:relative;
   overflow:hidden;
 }
-.assignment-card::before{
+.assignment-card::before{            /* 刷墨动画 */
   content:'';
   position:absolute;
   left:0;top:0;width:4px;height:100%;
@@ -194,3 +193,4 @@ body{
   .classroom-with-image{flex-direction:column;text-align:center}
   .classroom-image img{width:100%;max-width:300px}
 }
+
