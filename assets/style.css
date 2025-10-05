@@ -3,6 +3,11 @@
   font-family:'FangZhengBangShu';
   src:url('https://cdn.jsdelivr.net/npm/@static-fonts/fangzheng-bangshu@1.0.0/FangZhengBangShuJianTi-1.ttf') format('truetype');
 }
+@font-face{
+  font-family:'FZ-LiShu';
+  src:url('https://cdn.jsdelivr.net/npm/@static-fonts/fangzheng-lishu@1.0.0/FangZhengBangShuJianTi-1.ttf') format('truetype');
+}
+
 :root{
   --theme-red:#9B1D2B;          /* 朱砂红 */
   --theme-gray:#1E1E1E;        /* 深墨灰 */
@@ -10,8 +15,8 @@
   --gold:#C9A145;              /* 鎏金点缀 */
   --radius:8px;
   --shadow:0 4px 12px rgba(0,0,0,.08);
-  --title-main-size: 36px;
-  --title-sub-size: 20px;
+  --title-main-size: 24px;
+  --title-sub-size: 18px;
 }
 
 /* ===== 1. 基础重置 ===== */
@@ -104,12 +109,10 @@ body{
 .assignment-title{
   text-align: center;
   margin: 40px 5vw 20px;
-  position: relative;
-  display: inline-block;
 }
 .title-main{
-  font-family: "FangZhengBangShu", serif;
-  font-weight: bold;
+  font-family: "FZ-LiShu", serif;
+  font-weight: normal;
   font-size: var(--title-main-size);
   color: var(--theme-red);
   margin-right: 0.4em;
@@ -126,7 +129,7 @@ body{
   display: block;
   height: 4px;
   margin-top: 8px;
-  background: linear-gradient(to right, #9B1D2B, #D46A6A, #9B1D2B);
+  background: linear-gradient(to right, #9B1D2B, #d46161, #f4d7db);
   border-radius: 2px;
 }
 
