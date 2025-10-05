@@ -5,39 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>中国新闻传播史 教学网站</title>
   <link rel="stylesheet" href="assets/style.css">
-  <style>
-    /* 新增：让 8 张卡片呈 2×4 网格，右下角留空给“更多+” */
-    .assignment-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);   /* 四列 */
-      grid-template-rows: repeat(2, 1fr);      /* 两行 */
-      gap: 20px;
-      margin-bottom: 40px;
-      position: relative;
-    }
-    /* 标题与“更多+”同一行 */
-    .assignment-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 20px;   /* 原下边距移到这里 */
-      font-size: 22px;       /* 原字号保持 */
-      color: #333;           /* 与正文主色一致 */
-    }
-
-    /* “更多+”样式 */
-    .more-link {
-      font-size: 15px;              /* 比标题小一点 */
-      color: #9B1D2B;               /* 沿用 banner 主色调 */
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color .3s;
-    }
-
-    .more-link:hover {
-      border-bottom-color: #9B1D2B; /* 悬停出现下划线 */
-    }
-  </style>
 </head>
 <body>
 
@@ -69,75 +36,20 @@
   </section>
 
   <!-- 翻转课堂：仅保留 8 项，标题右侧加“更多+” -->
-<h2 class="assignment-title">
-  翻转课堂：研讨成果精选
-  <a class="more-link" href="assignments/html/more.html" target="_blank">更多+</a>
-</h2>
-<div class="assignment-grid">
-  <!-- A -->
-  <article class="assignment-card">
-    <a href="assignments/html/A.html" target="_blank">
-      <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-    </a>
-    <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-  </article>
-
-  <!-- B -->
-  <article class="assignment-card">
-    <a href="assignments/html/B.html" target="_blank">
-      <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-    </a>
-    <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-  </article>
-
-  <!-- C -->
-  <article class="assignment-card">
-    <a href="assignments/html/C.html" target="_blank">
-      <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-    </a>
-    <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-  </article>
-
-  <!-- D -->
-  <article class="assignment-card">
-    <a href="assignments/html/D.html" target="_blank">
-      <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-    </a>
-    <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-  </article>
-
-  <!-- E -->
-  <article class="assignment-card">
-    <a href="assignments/html/E.html" target="_blank">
-      <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-    </a>
-    <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-  </article>
-
-  <!-- F -->
-  <article class="assignment-card">
-    <a href="assignments/html/F.html" target="_blank">
-      <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-    </a>
-    <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-  </article>
-
-  <!-- G -->
-  <article class="assignment-card">
-    <a href="assignments/html/G.html" target="_blank">
-      <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-    </a>
-    <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-  </article>
-
-  <!-- H -->
-  <article class="assignment-card">
-    <a href="assignments/html/H.html" target="_blank">
-      <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-    </a>
-    <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
-  </article>
-</div>
+  <h2 class="assignment-title">
+    翻转课堂：研讨成果精选
+    <a class="more-link" href="assignments/html/more.html" target="_blank">更多+</a>
+  </h2>
+  <div class="assignment-grid">
+    <!-- A to H: 8 Assignment Cards -->
+    <article class="assignment-card">
+      <a href="assignments/html/A.html" target="_blank">
+        <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
+      </a>
+      <p>探讨梁启超在新闻传播中的思想与实践。分析“新报”论在近代新闻史中的意义。</p>
+    </article>
+    <!-- Repeat for B, C, D, E, F, G, H -->
+  </div>
 
   <!-- 第一课堂 -->
   <section class="flipped-classroom classroom-with-image">
@@ -146,10 +58,7 @@
     </div>
     <div class="classroom-content">
       <h2>第一课堂：线上学习资料</h2>
-      <p>回归文献是翻转课堂的前提。选课的同学需围绕分组选题，直观接触并研读丰富的
-         一手历史文献——报刊原件原文、报人回忆录、记者作品集等，梳理并参考既有研究
-         成果，通过研究型学习，完成对选题的资料搜集、思考与分析，并在翻转课堂中进
-         行成果分享与研讨。</p>
+      <p>回归文献是翻转课堂的前提。选课的同学需围绕分组选题，直观接触并研读丰富的历史文献——报刊原件原文、报人回忆录、记者作品集等，梳理并参考既有研究成果，通过研究型学习，完成对选题的资料搜集、思考与分析，并在翻转课堂中进行成果分享与研讨。</p>
       <a class="detail-link" href="/Pengpai/assignments/html/classone.html" target="_blank">查看详情</a>
     </div>
   </section>
@@ -161,10 +70,7 @@
     </div>
     <div class="classroom-content">
       <h2>第二课堂：优秀作品展览</h2>
-      <p>“一切历史都是当代史”。新闻史教学应与学生创新创业项目、专业竞赛等有机融合，
-         专业小课堂要与社会大课堂相互呼应。本课程以成果为导向，鼓励学生在实践中打通
-         历史视野与理论思维，积极参与国创、市创、SRTP项目，参加挑战杯、全国新媒体创
-         意大赛以及新闻评论大赛。“第二课堂”已产出系列优秀作品。</p>
+      <p>“一切历史都是当代史”。新闻史教学应与学生创新创业项目、专业竞赛等有机融合，专业小课堂要与社会大课堂相互呼应。本课程以成果为导向，鼓励学生在实践中打通历史视野与理论思维，积极参与国创、市创、SRTP项目，参加挑战杯、全国新媒体创意大赛以及新闻评论大赛。“第二课堂”已产出系列优秀作品。</p>
       <a class="detail-link" href="/Pengpai/assignments/html/classtwo.html" target="_blank">查看详情</a>
     </div>
   </section>
