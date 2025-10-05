@@ -168,7 +168,7 @@ body{
   position:relative;
   overflow:hidden;
 }
-/* 刷墨动画
+/* 刷墨动画 */
 .assignment-card::before{            
   content:'';
   position:absolute;
@@ -183,7 +183,7 @@ body{
   box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 .assignment-card:hover::before{transform:scaleY(1)}
-*/
+
 
 .assignment-card h3{
   font-size:18px;
