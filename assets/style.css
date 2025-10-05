@@ -68,7 +68,8 @@ body{
   transition:.3s;
 }
 .search-box input:focus{
-  outline:none;box-shadow:0 0 0 3px rgba(155,29,43,.2);
+  outline:none;
+  box-shadow:0 0 0 3px rgba(155,29,43,.2);
 }
 .search-box button{
   padding:12px 24px;
@@ -85,13 +86,15 @@ body{
 
 /* ===== 4. Banner：古籍残卷圆角 ===== */
 .banner{
+  position: relative;
+  height: 50%;
+  overflow: hidden;
   padding:0 5vw 20px;
 }
 .banner img{
-  width: 60%;
+  width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto; 
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -99,22 +102,31 @@ body{
 /* ===== 5. 翻转课堂标题：竖排小篆前饰 ===== */
 .assignment-title{
   text-align: center;
-  margin:40px 5vw 20px;
-  padding-left: 0;
+  margin: 40px 5vw 20px;
+  position: relative;
+  display: inline-block;
 }
 .title-main{
-  display: block;
-  font-family: "思源黑体", "Microsoft YaHei", sans-serif;
+  font-family: "FangZhengBangShu", serif;
   font-weight: bold;
   font-size: var(--title-main-size);
   color: var(--theme-red);
+  margin-right: 0.4em;
 }
 .title-sub{
-  display: block;
-  font-family: 'FangZhengBangShu',  serif;
+  font-family: "思源黑体", "Microsoft YaHei",  sans-serif;
   font-size: var(--title-sub-size);
   color: var(--theme-gray);
   opacity: .85;
+}
+
+.assignment-title::after {
+  content: "";
+  display: block;
+  height: 4px;
+  margin-top: 8px;
+  background: linear-gradient(to right, #9B1D2B, #D46A6A, #9B1D2B);
+  border-radius: 2px;
 }
 
 .assignment-more{
