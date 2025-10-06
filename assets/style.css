@@ -268,7 +268,7 @@ body{
   position:relative;          /* 给伪元素定位 */
 }
 
-.classroom-content h2::after{
+.cla-title h2::after{
   content:"";
   display:block;
   width:180px;               /* 线长可改 */
