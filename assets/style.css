@@ -129,7 +129,7 @@ body{
   font-size:initial;
   line-height:1.2;
 }
-.assignment-title span:first child {
+.assignment-title span:first-child {
   font-family: 'PangMen', serif;
   font-size: 32px;
   color: var(--theme-red);
