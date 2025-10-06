@@ -222,12 +222,14 @@ body{
 
 /* ===== 7. 第一/第二课堂：左图右文古籍对开 ===== */
 .flipped-classroom{
-  margin:40px 5vw;
+  position:relative;
+  max-width: 1200px;
+  margin:40px auto;
   background:#fffef9;
-  border:1px solid var(--theme-red);
+  border:none;
   border-radius:var(--radius);
   box-shadow:var(--shadow);
-  padding:30px;
+  padding:30px 40px;
 }
 .classroom-with-image{
   display:flex;
