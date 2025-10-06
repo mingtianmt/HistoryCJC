@@ -134,14 +134,14 @@ body{
   line-height:1.2;
 }
 .title-main{
-  font-family: 'PangMen', 'Source Han Sans SC', 'Microsoft YaHei', san-serif;
-  font-weight: bold;
+  font-family: 'PangMen', serif;
+  font-weight: normal;
   font-size: var(--title-main-size);
   color: var(--theme-red);
   margin-right: 0.4em;
 }
 .title-sub{
-  font-family: 'FangZhengBangShu', 'Source Han Sans SC', 'Microsoft YaHei', san-serif;
+  font-family: 'FangZhengBangShu', serif;
   font-size: var(--title-sub-size);
   color: var(--theme-gray);
   opacity: .85;
@@ -178,7 +178,7 @@ body{
 }
 .assignment-card{
   background:#fffef9;
-  border:1px solid var(--theme-red);
+  border:2px solid var(--theme-red);
   border-radius:var(--radius);
   padding:16px;
   box-shadow:var(--shadow);
@@ -270,16 +270,14 @@ body{
 
 .classroom-content h2::after{
   content:"";
-  position:absolute;
-  left:50%;                   /* 从中点开始 */
-  bottom:-6px;               /* 贴在文字正下方 */
-  transform:translateX(-50%);/* 居中 */
-  width:120px;               /* 线长可改 */
-  height:3px;
+  display:block;
+  width:180px;               /* 线长可改 */
+  height:4px;
+  margin:8px auto 0;
   background:linear-gradient(to right,
               transparent,
-              var(--theme-red) 20%,
-              var(--theme-red) 80%,
+              var(--theme-red) 35%,
+              var(--theme-red) 65%,
               transparent);
   border-radius:2px;
 }
