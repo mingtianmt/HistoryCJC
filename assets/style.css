@@ -227,13 +227,65 @@ body{
   border-radius:var(--radius);
   box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
-.classroom-content h2{
-  font-family:'FangZhengBangShu',serif;
-  font-size:22px;
-  color:var(--theme-red);
-  margin-bottom:12px;
+
+/* 1. 主、副标题各自字体/颜色/字号 */
+.classroom-content h2 span:first-child{
+  font-family:'PangMen',serif;          /* 手写粗书体 */
+  font-size:32px;                       /* 比“翻转课堂”再大一号 */
+  color:var(--theme-red);               /* 朱砂红 */
+  margin-right:0.3em;                   /* 与副标题留空 */
 }
-.classroom-content p{margin-bottom:16px}
+
+.classroom-content h2 span:last-child{
+  font-family:'FangZhengBangShu',serif; /* 榜书 */
+  font-size:22px;                       /* 比主标题小，但比正文大 */
+  color:var(--theme-gray);              /* 深墨灰 */
+}
+
+/* 2. 标题渐变线 - 中点向外淡出 */
+.classroom-content h2{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  margin:0 0 12px 0;
+  position:relative;          /* 给伪元素定位 */
+}
+
+.classroom-content h2::after{
+  content:"";
+  position:absolute;
+  left:50%;                   /* 从中点开始 */
+  bottom:-6px;               /* 贴在文字正下方 */
+  transform:translateX(-50%);/* 居中 */
+  width:120px;               /* 线长可改 */
+  height:3px;
+  background:linear-gradient(to right,
+              transparent,
+              var(--theme-red) 20%,
+              var(--theme-red) 80%,
+              transparent);
+  border-radius:2px;
+}
+
+/* 1. 通栏横线 - 纯红色 */
+.flipped-classroom{
+  position:relative;
+  margin:40px 0;
+  padding:30px 5vw;
+  background:#fffef9;
+  border:none;
+}
+
+.flipped-classroom::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-4px;
+  height:4px;
+  background:var(--theme-red);   /* 同风格朱砂红，无渐变 */
+  border-radius:2px;
+}
 
 /* ===== 8. 响应式：手机竖排 ===== */
 @media(max-width:768px){
