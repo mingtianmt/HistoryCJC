@@ -127,15 +127,21 @@ body{
   line-height:1;
   position:relative;
 }
-.assignment .title-main{
-  font-family: "PangMen", serif;
+.assignment .title-main,
+.assignment-title .title-sub{
+  display:inline-block;
+  font-size:initial;
+  line-height:1.2;
+}
+.title-main{
+  font-family: 'PangMen', 'Source Han Sans SC', 'Microsoft YaHei', san-serif;
   font-weight: bold;
   font-size: var(--title-main-size);
   color: var(--theme-red);
   margin-right: 0.4em;
 }
-.assignment .title-sub{
-  font-family: "FangZhengBangShu",  serif;
+.title-sub{
+  font-family: 'FangZhengBangShu', 'Source Han Sans SC', 'Microsoft YaHei', san-serif;
   font-size: var(--title-sub-size);
   color: var(--theme-gray);
   opacity: .85;
