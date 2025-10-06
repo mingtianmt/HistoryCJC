@@ -19,8 +19,8 @@
   --gold:#C9A145;              /* 鎏金点缀 */
   --radius:8px;
   --shadow:0 4px 12px rgba(0,0,0,.08);
-  --title-main-size: 24px;
-  --title-sub-size: 18px;
+  --title-main-size: 32px;
+  --title-sub-size: 22px;
 }
 
 /* ===== 1. 基础重置 ===== */
@@ -145,8 +145,10 @@ body{
   content: "";
   display: block;
   height: 4px;
-  /*margin-top: 8px;*/
-  background:linear-gradient(to right,
+  width: 180px;
+  margin-top: 8px auto 0;
+  background:linear-gradient(
+              to right,
               transparent,
               var(--theme-red) 35%,
               var(--theme-red) 65%,
