@@ -421,9 +421,9 @@ body{
 /* ===== 11. 页面底部文本：中新史课程资料库 ===== */
 .footer-text {
   text-align: center;              /* 文本居中 */
-  margin-top: 500px;                /* 上方留空 */
-  margin-bottom: 500px;             /* 下方留空 */
-  font-size: 18px;                 /* 适中的字号 */
+  margin-top: 77px;                /* 上方留空 */
+  margin-bottom: 77px;             /* 下方留空 */
+  font-size: 15px;                 /* 适中的字号 */
   color: var(--theme-gray);        /* 灰色，跟网页统一 */
 }
 
