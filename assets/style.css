@@ -120,18 +120,22 @@ body{
 
 /* ===== 5. 翻转课堂标题：竖排小篆前饰 ===== */
 .assignment-title{
+  display:inline-block;
   text-align: center;
   margin: 40px 5vw 20px;
+  font-size:0;
+  line-heitht:1;
+  position:relative;
 }
-.title-main{
-  font-family: "FZ-LiShu", serif;
+.assignment .title-main{
+  font-family: "PangMen", serif;
   font-weight: bold;
   font-size: var(--title-main-size);
   color: var(--theme-red);
   margin-right: 0.4em;
 }
-.title-sub{
-  font-family: "思源黑体", "Microsoft YaHei",  sans-serif;
+.assignment .title-sub{
+  font-family: "FangZhengBangShu",  serif;
   font-size: var(--title-sub-size);
   color: var(--theme-gray);
   opacity: .85;
@@ -141,8 +145,13 @@ body{
   content: "";
   display: block;
   height: 4px;
-  margin-top: 8px;
-  background: linear-gradient(to right, #9B1D2B, #d46161, #f4d7db);
+  /*margin-top: 8px;*/
+  background:linear-gradient(to right,
+              transparent,
+              var(--theme-red) 35%,
+              var(--theme-red) 65%,
+              transparent);
+  /*background: linear-gradient(to right, #9B1D2B, #d46161, #f4d7db);*/
   border-radius: 2px;
 }
 
