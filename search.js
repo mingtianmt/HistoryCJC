@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsList.appendChild(li);
       });
     }
-    resultsBox.style.marginTop = '20px';
+    resultsBox.style.marginTop = '50px';
     resultsBox.style.display = 'block';
   }
 
