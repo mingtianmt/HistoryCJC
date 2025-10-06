@@ -314,7 +314,7 @@ body{
 .section-title{
   display:block;
   text-align:center;
-  margin:40px auto 0;
+  margin:40px auto 20px;
   font-size:0;                 /* 父级清零，子级自定 */
   line-height:1;
 }
@@ -387,7 +387,7 @@ body{
 .flipped-classroom{
   position:relative;
   margin:0;
-  padding:30px 5vw;
+  padding:40px 5vw;
   background:#fffef9;
   border:none;
 }
@@ -400,8 +400,8 @@ body{
 
 .detail-link {
   position: absolute;
-  right: 24px;          /* 距右边缘 */
-  bottom: 24px;         /* 距下边缘 */
+  right: 20px;          /* 距右边缘 */
+  bottom: 20px;         /* 距下边缘 */
   padding: 8px 16px;    /* 方框内留白 */
   background: var(--theme-red); /* 红色背景 */
   color: #fffef9;       /* 浅色字（纸色） */
