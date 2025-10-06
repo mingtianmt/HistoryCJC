@@ -114,6 +114,21 @@
     @media(max-width:600px){
       .three-col-grid{grid-template-columns:1fr}
     }
+
+    /* ---------- 7. 页面底部文本：中新史课程资料库 ---------- */
+    .footer-text {
+      text-align: center;              /* 文本居中 */
+      margin-top: 77px;                /* 上方留空 */
+      margin-bottom: 77px;             /* 下方留空 */
+      font-size: 15px;                 /* 适中的字号 */
+      color: #1E1E1E;                  /* 灰色，替代 var(--theme-gray) 如果没有定义 */
+    }
+
+    /* 高亮红色文字 */
+    .highlight-red {
+      color: var(--cinnabar); /* 红色，与页面主题红一致 */
+    }
+
   </style>
 </head>
 
@@ -121,7 +136,9 @@
   <!-- 顶部卷轴 -->
   <header class="header">
     <h1 class="site-title">中国新闻传播史教学网站</h1>
-    <p class="subtitle">中新史课程资料库</p>
+    <p class="subtitle">
+      翻转课堂 | 第一课堂 | <span class="highlight-red">第二课堂</span>  
+    </p>
   </header>
 
   <main class="container">
@@ -178,5 +195,10 @@
       </div>
     </div>
   </main>
+
+      <!-- 第二课堂部分结束后，添加空白和文本 -->
+  <section class="footer-text">
+    <p>中新史课程资料库</p>
+  </section>
 </body>
 </html>
