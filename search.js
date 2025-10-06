@@ -16,27 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const a   = card.querySelector('a');
       if (h3 && a) {
         data.push({
-          type: '翻转课堂',
           title: h3.textContent.trim(),
           link: a.href
         });
       }
     });
-
-    /* 1.2 第一课堂 */
-    const firstH2  = document.querySelector('.flipped-classroom.classroom-with-image:nth-of-type(1) .classroom-content h2');
-    const firstA   = document.querySelector('.flipped-classroom.classroom-with-image:nth-of-type(1) .detail-link');
-    if (firstH2 && firstA) {
-      data.push({ type: '第一课堂', title: firstH2.textContent.trim(), link: firstA.href });
-    }
-
-    /* 1.3 第二课堂 */
-    const secondH2 = document.querySelector('.flipped-classroom.classroom-with-image:nth-of-type(2) .classroom-content h2');
-    const secondA  = document.querySelector('.flipped-classroom.classroom-with-image:nth-of-type(2) .detail-link');
-    if (secondH2 && secondA) {
-      data.push({ type: '第二课堂', title: secondH2.textContent.trim(), link: secondA.href });
-    }
-
     return data;
   }
 
