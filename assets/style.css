@@ -312,29 +312,17 @@ body{
   font-size:32px;
   color:var(--theme-red);
   margin-right:0.3em;
-    border-bottom:3px solid transparent; /* 渐变线直接长在文字底部 */
-  border-image:linear-gradient(to right,
-                 transparent,
-                 var(--theme-red) 35%,
-                 var(--theme-red) 65%,
-                 transparent) 1;
-  border-radius:2px;
+  border-bottom:none;
 }
 .section-title span:last-child{
   font-family:'FangZhengBangShu',serif;
   font-size:22px;
   color:var(--theme-gray);
-    border-bottom:3px solid transparent;
-  border-image:linear-gradient(to right,
-                 transparent,
-                 var(--theme-red) 35%,
-                 var(--theme-red) 65%,
-                 transparent) 1;
-  border-radius:2px;
+  border-bottom:none;
 }
 
 /* 标题下方渐变线（中点向外淡出）*/
-/*.section-title::after{
+.section-title::after{
   content:"";
   display:block;
   height:3px;
@@ -346,7 +334,7 @@ body{
               var(--theme-red) 65%,
               transparent);
   border-radius:2px;
-} */
+} 
 
 /* ==== 10. 板块上下通栏纯红横线 ==== */
 .flipped-classroom::before{
@@ -354,7 +342,7 @@ body{
   position:absolute;
   left:0;
   right:0;
-  top:-6px;
+  top:-10px;
   height:2px;
   background:var(--theme-red);
   border-radius:2px;
@@ -364,7 +352,7 @@ body{
   position:absolute;
   left:0;
   right:0;
-  bottom:-6px;
+  bottom:-10px;
   height:2px;
   background:var(--theme-red);
   border-radius:2px;
