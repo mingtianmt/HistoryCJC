@@ -293,3 +293,80 @@ body{
   .classroom-image img{width:100%;max-width:300px}
 }
 
+.section-title{
+  text-align:center;
+  margin:40px 5vw 0;
+  font-size:0;                 /* 父级清零，子级自定 */
+}
+.section-title span:first-child{
+  font-family:'PangMen',serif;
+  font-size:32px;
+  color:var(--theme-red);
+  margin-right:0.3em;
+}
+.section-title span:last-child{
+  font-family:'FangZhengBangShu',serif;
+  font-size:22px;
+  color:var(--theme-gray);
+}
+
+/* 标题下方渐变线（中点向外淡出）*/
+.section-title::after{
+  content:"";
+  display:block;
+  height:3px;
+  width:140px;
+  margin:8px auto 0;
+  background:linear-gradient(to right,
+              transparent,
+              var(--theme-red) 35%,
+              var(--theme-red) 65%,
+              transparent);
+  border-radius:2px;
+}
+
+/* 板块上下通栏纯红横线 */
+.flipped-classroom{
+  position:relative;
+  margin:0;
+  padding:30px 5vw;
+  background:#fffef9;
+  border:none;
+}
+.flipped-classroom::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:4px;
+  background:var(--theme-red);
+  border-radius:2px;
+}
+
+
+/* ===== 10. 查看详情 - 红方框右下角 ===== */
+.classroom-content {
+  position: relative;   /* 给子元素绝对定位基准 */
+  padding-bottom: 60px; /* 预留下部空间，防止文字被遮挡 */
+}
+
+.detail-link {
+  position: absolute;
+  right: 24px;          /* 距右边缘 */
+  bottom: 24px;         /* 距下边缘 */
+  padding: 8px 16px;    /* 方框内留白 */
+  background: var(--theme-red); /* 红色背景 */
+  color: #fffef9;       /* 浅色字（纸色） */
+  font-family: "思源黑体", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.detail-link:hover {
+  background: #7a1621;  /* 悬停深红 */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
