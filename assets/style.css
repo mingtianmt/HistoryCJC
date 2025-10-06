@@ -398,8 +398,8 @@ body{
 
 .detail-link {
   position: absolute;
-  right: 20px;          /* 距右边缘 */
-  bottom: 20px;         /* 距下边缘 */
+  right: 10px;          /* 距右边缘 */
+  bottom: 10px;         /* 距下边缘 */
   padding: 8px 16px;    /* 方框内留白 */
   background: var(--theme-red); /* 红色背景 */
   color: #fffef9;       /* 浅色字（纸色） */
