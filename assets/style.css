@@ -117,7 +117,7 @@ body{
 }
 
 /* ===== 5. 翻转课堂标题：竖排小篆前饰 ===== */
-.assignment-title{
+.assignment-title {
   display:block;
   text-align: center;
   margin: 40px 5vw 20px;
@@ -125,18 +125,18 @@ body{
   line-height:1;
   position:relative;
 }
-.assignment-title span{
+.assignment-title span {
   display:inline-block;
   font-size:initial;
   line-height:1.2;
 }
-.assignment-title span:first child{
+.assignment-title span:first child {
   font-family: 'PangMen', serif;
   font-size: 32px;
   color: var(--theme-red);
   margin-right: 0.3em;
 }
-.assignment-title span:last-child{
+.assignment-title span:last-child {
   font-family: 'FangZhengBangShu', serif;
   font-size: 22px;
   color: var(--theme-gray);
