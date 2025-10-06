@@ -286,10 +286,19 @@ body{
 /* 1. 通栏横线 - 纯红色 */
 .flipped-classroom{
   position:relative;
+  width:100%;
   margin:40px 0;
   padding:30px 5vw;
   background:#fffef9;
   border:none;
+}
+/* 内部内容容器：限制宽度，居中 */
+.flipped-classroom .classroom-inner {
+  max-width: 1200px;   /* 和翻转课堂卡片最大宽度一致 */
+  margin: 0 auto;      /* 水平居中 */
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 .flipped-classroom::after{
@@ -393,6 +402,7 @@ body{
 /* ===== 10. 查看详情 - 红方框右下角 ===== */
 .classroom-content {
   position: relative;   /* 给子元素绝对定位基准 */
+  flex:1;
   padding-bottom: 60px; /* 预留下部空间，防止文字被遮挡 */
 }
 
