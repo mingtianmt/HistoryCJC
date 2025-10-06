@@ -292,7 +292,7 @@ body{
   .classroom-with-image{flex-direction:column;text-align:center}
   .classroom-image img{width:100%;max-width:300px}
 }
-
+/* ===== 9. 标题下方渐变线（重点向外淡出） ====*/
 .section-title{
   text-align:center;
   margin:40px 5vw 0;
@@ -325,13 +325,16 @@ body{
   border-radius:2px;
 }
 
-/* 板块上下通栏纯红横线 */
-.flipped-classroom{
-  position:relative;
-  margin:0;
-  padding:30px 5vw;
-  background:#fffef9;
-  border:none;
+/* ==== 10. 板块上下通栏纯红横线 ==== */
+.flipped-classroom::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  height:4px;
+  background:var(--theme-red);
+  border-radius:2px;
 }
 .flipped-classroom::after{
   content:"";
@@ -344,6 +347,13 @@ body{
   border-radius:2px;
 }
 
+.flipped-classroom{
+  position:relative;
+  margin:0;
+  padding:30px 5vw;
+  background:#fffef9;
+  border:none;
+}
 
 /* ===== 10. 查看详情 - 红方框右下角 ===== */
 .classroom-content {
