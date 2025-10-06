@@ -223,21 +223,23 @@ body{
 /* ===== 7. 第一/第二课堂：左图右文古籍对开 ===== */
 .flipped-classroom{
   position:relative;
-  max-width: 1200px;
-  margin:40px auto;
+  margin:40px 0;
   background:#fffef9;
-  border:none;
-  border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  padding:30px 40px;
+  padding:40px 0;
 }
 .classroom-with-image{
+  max-width:1200px;
+  margin: 0 auto;
   display:flex;
-  gap:30px;
+  gap:40px;
   align-items:center;
+  padding: 0 40px;
+}
+.class-image {
+  flex: 0 0 200px;
 }
 .classroom-image img{
-  width:200px;
+  width:100%;
   height:auto;
   border-radius:var(--radius);
   box-shadow:0 4px 10px rgba(0,0,0,.1);
@@ -408,8 +410,8 @@ body{
 
 .detail-link {
   position: absolute;
-  right: 10px;          /* 距右边缘 */
-  bottom: 10px;         /* 距下边缘 */
+  right: 0;          /* 距右边缘 */
+  bottom: 0;         /* 距下边缘 */
   padding: 8px 16px;    /* 方框内留白 */
   background: var(--theme-red); /* 红色背景 */
   color: #fffef9;       /* 浅色字（纸色） */
