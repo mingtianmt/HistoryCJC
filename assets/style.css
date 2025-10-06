@@ -19,8 +19,6 @@
   --gold:#C9A145;              /* 鎏金点缀 */
   --radius:8px;
   --shadow:0 4px 12px rgba(0,0,0,.08);
-  --title-main-size: 32px;
-  --title-sub-size: 22px;
 }
 
 /* ===== 1. 基础重置 ===== */
@@ -135,16 +133,14 @@ body{
 }
 .title-main{
   font-family: 'PangMen', serif;
-  font-weight: normal;
-  font-size: var(--title-main-size);
+  font-size: 32px;
   color: var(--theme-red);
-  margin-right: 0.4em;
+  margin-right: 0.3em;
 }
 .title-sub{
   font-family: 'FangZhengBangShu', serif;
-  font-size: var(--title-sub-size);
+  font-size: 22px;
   color: var(--theme-gray);
-  opacity: .85;
 }
 
 .assignment-title::after {
