@@ -417,3 +417,13 @@ body{
   background: #7a1621;  /* 悬停深红 */
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
+
+/* ===== 11. 页面底部文本：中新史课程资料库 ===== */
+.footer-text {
+  text-align: center;              /* 文本居中 */
+  margin-top: 50px;                /* 上方留空 */
+  margin-bottom: 50px;             /* 下方留空 */
+  font-size: 18px;                 /* 适中的字号 */
+  color: var(--theme-gray);        /* 灰色，跟网页统一 */
+}
+
