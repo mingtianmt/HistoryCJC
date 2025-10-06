@@ -120,11 +120,11 @@ body{
 
 /* ===== 5. 翻转课堂标题：竖排小篆前饰 ===== */
 .assignment-title{
-  display:inline-block;
+  display:block;
   text-align: center;
   margin: 40px 5vw 20px;
   font-size:0;
-  line-heitht:1;
+  line-height:1;
   position:relative;
 }
 .assignment .title-main{
