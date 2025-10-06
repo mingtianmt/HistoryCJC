@@ -348,7 +348,7 @@ body{
   position:absolute;
   left:0;
   right:0;
-  top:-10px;
+  top:0;
   height:2px;
   background:var(--theme-red);
   border-radius:2px;
@@ -358,7 +358,7 @@ body{
   position:absolute;
   left:0;
   right:0;
-  bottom:-10px;
+  bottom:0;
   height:2px;
   background:var(--theme-red);
   border-radius:2px;
