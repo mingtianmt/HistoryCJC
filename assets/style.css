@@ -294,20 +294,43 @@ body{
 }
 /* ===== 9. 标题下方渐变线（重点向外淡出） ====*/
 .section-title{
+  display:block;
   text-align:center;
-  margin:40px 5vw 0;
+  margin:40px auto 0;
   font-size:0;                 /* 父级清零，子级自定 */
+  line-height:1;
 }
+
+/* 同一行：两个 span 都 inline-block */
+.section-title span{
+  display:inline-block;
+  vertical-align:baseline;      /* 底线对齐，防止上下错位 */
+}
+
 .section-title span:first-child{
   font-family:'PangMen',serif;
   font-size:32px;
   color:var(--theme-red);
   margin-right:0.3em;
+    border-bottom:3px solid transparent; /* 渐变线直接长在文字底部 */
+  border-image:linear-gradient(to right,
+                 transparent,
+                 var(--theme-red) 35%,
+                 var(--theme-red) 65%,
+                 transparent) 1;
+  border-radius:2px;
 }
 .section-title span:last-child{
   font-family:'FangZhengBangShu',serif;
   font-size:22px;
   color:var(--theme-gray);
+    border-bottom:3px solid transparent;
+  border-image:linear-gradient(to right,
+                 transparent,
+                 var(--theme-red) 35%,
+                 var(--theme-red) 65%,
+                 transparent) 1;
+  border-radius:2px;
 }
 
 /* 标题下方渐变线（中点向外淡出）*/
