@@ -169,6 +169,7 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:24px;
   padding:0 5vw;
+  margin-bottom: 60px;
 }
 .assignment-card{
   background:#fffef9;
@@ -308,7 +309,7 @@ body{
 .section-title{
   display:block;
   text-align:center;
-  margin:40px auto 20px;
+  margin:80px auto 30px;
   font-size:0;                 /* 父级清零，子级自定 */
   line-height:1;
 }
@@ -381,7 +382,7 @@ body{
 .flipped-classroom{
   position:relative;
   margin:0;
-  padding:40px 5vw;
+  padding:60px 5vw;
   background:#fffef9;
   border:none;
 }
