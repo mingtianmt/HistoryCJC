@@ -436,8 +436,8 @@ body{
 
 /* ===== 额外：第一/二课堂段落加大加粗 ===== */
 .classroom-content p {
-  font-size: 19px;      
-  font-weight: 450;     /* 加粗，比 bold 细一点，看着舒服 */
+  font-size: 16px;      
+  font-weight: 500;     /* 加粗，比 bold 细一点，看着舒服 */
   line-height: 2.0;     /* 行距也稍微拉开 */
   color:#000000;
 }
