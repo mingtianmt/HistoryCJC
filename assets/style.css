@@ -439,4 +439,5 @@ body{
   font-size: 18px;      /* 比原来 15px 大两号 */
   font-weight: 600;     /* 加粗，比 bold 细一点，看着舒服 */
   line-height: 1.8;     /* 行距也稍微拉开 */
+  color:#000000;
 }
