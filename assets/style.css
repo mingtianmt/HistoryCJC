@@ -407,8 +407,8 @@ body{
 
 .detail-link {
   position: absolute;
-  right: 0;          /* 距右边缘 */
-  bottom: 0;         /* 距下边缘 */
+  right: -5px;          /* 距右边缘 */
+  bottom: -5px;         /* 距下边缘 */
   padding: 8px 16px;    /* 方框内留白 */
   background: var(--theme-red); /* 红色背景 */
   color: #fffef9;       /* 浅色字（纸色） */
@@ -432,4 +432,11 @@ body{
   margin-bottom: 77px;             /* 下方留空 */
   font-size: 15px;                 /* 适中的字号 */
   color: var(--theme-gray);        /* 灰色，跟网页统一 */
+}
+
+/* ===== 额外：第一/二课堂段落加大加粗 ===== */
+.classroom-content p {
+  font-size: 18px;      /* 比原来 15px 大两号 */
+  font-weight: 600;     /* 加粗，比 bold 细一点，看着舒服 */
+  line-height: 1.8;     /* 行距也稍微拉开 */
 }
