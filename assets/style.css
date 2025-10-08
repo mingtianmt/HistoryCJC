@@ -1,7 +1,7 @@
 /* ===== 0. 数字人文字体方案 ===== */
 @font-face{
   font-family:'FangZhengBangShu';
-  src:url('https://cdn.jsdelivr.net/npm/@static-fonts/fangzheng-bangshu@1.0.0/FangZhengBangShuJianTi-1.ttf') format('truetype');
+  src:url('fonts/title.ttf') format('truetype');
 }
 @font-face{
   font-family:'FZ-LiShu';
@@ -100,6 +100,23 @@ body{
 .search-box button:hover{background:#7a1621}
 #clearBtn{background:var(--gold)}
 #clearBtn:hover{background:#a8863f}
+
+/* 1. 空壳：高度 0，后面内容认它当“原点” */
+.result-wrapper {
+  position: relative;   /* 让 absolute 子元素可定位（可选） */
+  height: 0;            /* 关键：不占高度 */
+  overflow: visible;    /* 允许子元素溢出显示 */
+}
+
+/* 2. 真实结果：负 margin 随意往上提 */
+.result-inner {
+  margin-top: -350px;   /* 你想提多少就写多少 */
+  background: #fffef9;
+  border: 1px solid var(--theme-red);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
 
 /* ===== 4. Banner：古籍残卷圆角 ===== */
 /*.banner{
