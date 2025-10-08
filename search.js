@@ -91,10 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ① 隐藏卡片
   grid.style.display = 'none';
-  // ② 结果块塞进原来卡片的位置（复制节点避免移动）
-  const clone = resultsBox.cloneNode(true);
-  clone.style.display = 'block';
-  grid.parentNode.insertBefore(clone, grid.nextSibling);
+  resultsBox.style.display = 'block';
 }
 
   /* ---------- 3. 清除 ---------- */

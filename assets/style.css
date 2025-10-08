@@ -105,6 +105,7 @@ body{
 /* ➜ 新增：banner 内结果槽 */
 .banner {
   position: relative;   /* 锚点 */
+  padding-bottom:60px;
 }
 .search-slot {
   position: absolute;
@@ -137,6 +138,13 @@ body{
   height: auto;
   display: block;
   margin-bottom:-4px;
+}
+
+.assignment-wrapper{
+  position:absolute;
+  left:0; right:0;
+  top:75%;          /* 永远停在 banner 3/4 处 */
+  z-index:3;
 }
 
 /* ===== 5. 翻转课堂标题：竖排小篆前饰 ===== */
@@ -186,6 +194,7 @@ body{
   padding-right: 5vw;
   margin-bottom: 20px;
   z-index:3;
+  position:relative;
 }
 
 /* ===== 6. 作业卡片：活字印刷悬浮 ===== */
