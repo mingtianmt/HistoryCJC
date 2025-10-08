@@ -122,6 +122,7 @@ body{
   display: none;         /* JS 控制显隐即可 */
   margin-top: 0;
   pointer-events:auto;
+  position:relative;
 }
 
 /* ===== 4. Banner：古籍残卷圆角 ===== */
