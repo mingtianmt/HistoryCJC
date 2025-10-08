@@ -120,7 +120,7 @@ body{
 #searchResults {
   padding: 0 5vw 20px;   /* 左右留空，底留一点呼吸 */
   display: none;         /* JS 控制显隐即可 */
-  margin-top: -10px;
+  margin-top: 0;
   pointer-events:auto;
 }
 
@@ -184,6 +184,7 @@ body{
   text-align: right;
   padding-right: 5vw;
   margin-bottom: 20px;
+  z-index:3;
 }
 
 /* ===== 6. 作业卡片：活字印刷悬浮 ===== */
