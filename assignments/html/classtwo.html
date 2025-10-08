@@ -44,10 +44,15 @@
       padding:18px 5vw;
     }
     .site-title{
-      font-family:'Times New Roman', Times, serif;
       font-size:28px;
       letter-spacing:4px;
       color:var(--cinnabar);
+    }
+    .site-title span:first-child{
+      font-family:'FangZhengBangShu', serif;
+    }
+    .site-title span:last-child{
+      font-family:'Times New Roman', Times, serif;
     }
     .subtitle{
       align-self:flex-end;
@@ -123,7 +128,9 @@
 <body>
   <!-- 顶部卷轴 -->
   <header class="header">
-    <h1 class="site-title">中国新闻传播史教学网站</h1>
+    <h1 class="site-title">
+      <span>中国新闻传播史</span><span>教学网站</span>
+    </h1>
     <p class="subtitle">
       翻转课堂 | 第一课堂 | <span class="highlight-red">第二课堂</span>  
     </p>
