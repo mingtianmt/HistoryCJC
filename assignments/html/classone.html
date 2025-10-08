@@ -20,7 +20,7 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{
       font-family:"思源黑体","Microsoft YaHei",sans-serif;
-      background:var(--paper) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity=".04"><rect fill="%239B1D2B" x="0" y="0" width="1" height="100"/></svg>');
+      background:var(--paper) url(../assets/background.jpg) no-repeat center/cover fixed;   /* 新背景 */
       color:var(--ink);
       padding-top:100px;
       line-height:1.8;
@@ -129,6 +129,28 @@
       color: var(--cinnabar); /* 红色，与页面主题红一致 */
     }
 
+    /*  仅网络课程观摩极简列表  */
+    .plain-db{
+      max-width:760px;
+      margin:0 auto 60px;
+      padding:0;
+      list-style:none;
+      border-left:2px solid var(--cinnabar);
+      padding-left:1em;
+    }
+    .plain-db li{
+      margin:8px 0;
+      line-height:1.7;
+    }
+    .plain-db a{
+      color:var(--ink);
+      text-decoration:none;
+      border-bottom:1px solid transparent;
+    }
+    .plain-db a:hover{
+      border-bottom-color:var(--cinnabar);
+    }
+
   </style>
 </head>
 
@@ -148,50 +170,50 @@
     <h2 class="section-title">教材推荐</h2>
     <div class="three-col-grid">
       <div class="card">
-        <img src="../assets/c1.jpg" alt="教材1">
-        <div class="desc">本教材为中国新闻传播史课程料，便于学生自主研学和课堂讨论。</div>
+        <img src="../assets/book1.jpg" alt="教材1">
+        <div class="desc">《中国新闻传播史》（第4版）&nbsp;中国人民大学出版社</div>
       </div>
       <div class="card">
-        <img src="../assets/c2.jpg" alt="教材2">
-        <div class="desc">本教材为中国新闻传播史资料，便于学生自主研学和课堂讨论。</div>
+        <img src="../assets/book2.jpg" alt="教材2">
+        <div class="desc">《中国新闻传播史》&nbsp;高等教育出版社</div>
       </div>
       <div class="card">
-        <img src="../assets/c3.jpg" alt="教材3">
-        <div class="desc">本教材为中国新闻传播考资料，便于学生自主研学和课堂讨论。</div>
+        <img src="../assets/book3.jpg" alt="教材3">
+        <div class="desc">《中国近代报业发展史》&nbsp;中国社会科学出版社</div>
       </div>
     </div>
 
     <!-- 网络课程观摩 -->
     <h2 class="section-title">网络课程观摩</h2>
-    <div class="three-col-grid">
-      <div class="card">
-        <img src="../assets/c4.jpg" alt="课程1">
-        <div class="desc">课程观摩示例1：讲解晚清报人的新闻思想与政治实践。</div>
-      </div>
-      <div class="card">
-        <img src="../assets/c5.jpg" alt="课程2">
-        <div class="desc">课程观摩示例2：分析“新报”论在近代新闻史中的意义。</div>
-      </div>
-      <div class="card">
-        <img src="../assets/c6.jpg" alt="课程3">
-        <div class="desc">课程观摩示例3：学生研讨与教师点评结合的课堂录像。</div>
-      </div>
-    </div>
+    <ul class="plain-db">
+      <li>中国国家数字图书馆（<a href="https://www.nlc.cn/web/index.shtml" target="_blank">https://www.nlc.cn/web/index.shtml</a>）</li>
+      <li>国家图书馆·民国期刊/报纸数据库（<a href="http://mylib.nlc.cn/web/guest/minguoqikan" target="_blank">http://mylib.nlc.cn/web/guest/minguoqikan</a>）</li>
+      <li>中国历史文献总库·近代报纸数据库（请通过重庆大学图书馆访问）</li>
+      <li>中国历史文献总库·红色文献数据库（请通过重庆大学图书馆访问）</li>
+      <li>晚清民国期刊全文数据库（请通过重庆大学图书馆访问）</li>
+      <li>大成老旧刊全文数据库（请通过重庆大学图书馆访问）</li>
+      <li>全国报刊索引（<a href="http://www.cnbksy.cn/home" target="_blank">http://www.cnbksy.cn/home</a>）（请通过重庆大学图书馆访问）</li>
+      <li>爱如生晚清民国大报库（请通过重庆大学图书馆访问）</li>
+      <li>《人民日报》图文数据库（请通过重庆大学图书馆访问）</li>
+      <li>民国文献大全（需接入校园VPN，通过重庆大学图书馆访问）</li>
+      <li>《大公报》全文检索数据库（<a href="http://tk.dhcdb.com.tw/tknewsc/tknewskm" target="_blank">http://tk.dhcdb.com.tw/tknewsc/tknewskm</a>）</li>
+      <li>瀚堂近代报刊数据库（<a href="http://www.neohytung.com/Main.aspx" target="_blank">http://www.neohytung.com/Main.aspx</a>）</li>
+    </ul>
 
     <!-- 教学影片 -->
     <h2 class="section-title">教学影片</h2>
     <div class="three-col-grid">
       <div class="card">
-        <img src="../assets/c7.jpg" alt="影片1">
-        <div class="desc">教学影片示例1：晚清报刊历史影像资料解析。</div>
+        <img src="../assets/movie1.jpg" alt="影片1">
+        <div class="desc">浪潮</div>
       </div>
       <div class="card">
-        <img src="../assets/c8.jpg" alt="影片2">
-        <div class="desc">教学影片示例2：学生实地调研视频展示。</div>
+        <img src="../assets/movie2.jpg" alt="影片2">
+        <div class="desc">我的1919</div>
       </div>
       <div class="card">
-        <img src="../assets/c9.jpg" alt="影片3">
-        <div class="desc">教学影片示例3：课程专题讲座录像回顾。</div>
+        <img src="../assets/movie3.jpg" alt="影片3">
+        <div class="desc">觉醒年代</div>
       </div>
     </div>
   </main>

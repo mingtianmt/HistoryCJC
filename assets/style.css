@@ -25,7 +25,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:"思源黑体","Microsoft YaHei",sans-serif;
-  background: #F5F2E8 url('assets/background.jpg') center top / 100% auto repeat-y;
+  background: #F5F2E8 url('background.jpg') center/cover;
   background-attachment: fixed;
   color:var(--theme-red);
   /*padding-top:100px;            /* 为固定导航让位 */
