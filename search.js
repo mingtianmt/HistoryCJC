@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearBtn    = document.getElementById('clearBtn');
   const resultsBox  = document.getElementById('searchResults');
   const resultsList = document.getElementById('results');
+  const searchSlot  = document.getElementById('searchSlot');
 
   /* ---------- 1. 采集可搜索数据 ---------- */
   function collectData() {
@@ -67,6 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsList.appendChild(li);
       });
     }
+    searchSlot.innerHTML = '';
+    searchSlot.appendChild(resultsBox);
     resultsBox.style.display = 'block';
   }
 
@@ -74,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function clearSearch() {
     searchInput.value = '';
     resultsList.innerHTML = '';
+    searchSlot.innerHTML = '';
     resultsBox.style.display = 'none';
   }
 

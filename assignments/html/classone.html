@@ -44,11 +44,11 @@
       padding:18px 5vw;
     }
     .site-title{
-      letter-spacing:3px;
+      letter-spacing:2.5px;
       color:var(--cinnabar);
     }
     .site-title span:first-child{
-      font-size:40px;
+      font-size:42px;
       font-family:'FangZhengBangShu', serif;
     }
     .site-title span:last-child{
@@ -116,6 +116,39 @@
       font-size:15px;
       color:#444;
       flex:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    /* ---------- 8. 教学影片：隐形框三列 ---------- */
+    .movie{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);   /* 一行三列 */
+      gap:30px;                              /* 列间距 */
+      margin-bottom:60px;
+    }
+    .movie .item{                            /* 隐形框：只负责布局，无视觉 */
+      display:flex;
+      flex-direction:column;                 /* 图在上，字在下 */
+      align-items:center;                    /* 水平居中 */
+    }
+    .movie img{
+      width:100%;
+      height:auto;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      transition:transform .3s;
+    }
+    .movie img:hover{
+     transform:translateY(-4px);
+    }
+    .movie .desc{                            /* 图片下方文字 */
+      margin-top:12px;
+      font-size:15px;
+      color:var(--ink);
     }
 
     /* ---------- 6. 响应式 ---------- */
@@ -184,15 +217,15 @@
     <div class="three-col-grid">
       <div class="card">
         <img src="../assets/book1.jpg" alt="教材1">
-        <div class="desc">《中国新闻传播史》（第4版）&nbsp;中国人民大学出版社</div>
+        <div class="desc">《中国新闻传播史》（第4版）<br>中国人民大学出版社</div>
       </div>
       <div class="card">
         <img src="../assets/book2.jpg" alt="教材2">
-        <div class="desc">《中国新闻传播史》&nbsp;高等教育出版社</div>
+        <div class="desc">《中国新闻传播史》<br>高等教育出版社</div>
       </div>
       <div class="card">
         <img src="../assets/book3.jpg" alt="教材3">
-        <div class="desc">《中国近代报业发展史》&nbsp;中国社会科学出版社</div>
+        <div class="desc">《中国近代报业发展史》<br>中国社会科学出版社</div>
       </div>
     </div>
 
@@ -215,16 +248,16 @@
 
     <!-- 教学影片 -->
     <h2 class="section-title">教学影片</h2>
-    <div class="three-col-grid">
-      <div class="card">
+    <div class="movie">
+      <div class="item">
         <img src="../assets/movie1.jpg" alt="影片1">
         <div class="desc">浪潮</div>
       </div>
-      <div class="card">
+      <div class="item">
         <img src="../assets/movie2.jpg" alt="影片2">
         <div class="desc">我的1919</div>
       </div>
-      <div class="card">
+      <div class="item">
         <img src="../assets/movie3.jpg" alt="影片3">
         <div class="desc">觉醒年代</div>
       </div>
