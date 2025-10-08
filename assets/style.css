@@ -46,17 +46,18 @@ body{
   padding:18px 5vw;
 }
 .site-title{
-  font-size:28px;
   letter-spacing:4px;
   color:var(--theme-red);
 }
 
 .site-title span:first-child{
+  font-size:35px;
   font-family:'FangZhengBangShu', serif;
 }
 
 .site-title span:last-child{
-  font-family:"思源黑体","Microsoft YaHei",sans-serif;
+  font-size:25px;
+  font-family:'Times New Roman', Times, serif;
 }
 
 .subtitle{
@@ -137,14 +138,14 @@ body{
   line-height:1.2;
 }
 .assignment-title span:first-child {
-  font-family: 'PangMen', serif;
-  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
   color: var(--theme-red);
   margin-right: 0.3em;
 }
 .assignment-title span:last-child {
-  font-family: 'FangZhengBangShu', serif;
-  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
   color: var(--theme-gray);
 }
 
@@ -347,14 +348,14 @@ body{
 }
 
 .section-title span:first-child{
-  font-family:'PangMen',serif;
-  font-size:32px;
+  font-family:'Times New Roman', Times, serif;
+  font-size:30px;
   color:var(--theme-red);
   margin-right:0.3em;
 }
 .section-title span:last-child{
-  font-family:'FangZhengBangShu',serif;
-  font-size:22px;
+  font-family:'Times New Roman', Times, serif;
+  font-size:30px;
   color:var(--theme-gray);
 }
 

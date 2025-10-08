@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     resultsBox.style.display = 'block';
-    resultsBox.style.display = 'none';
   }
 
   /* ---------- 3. 清除 ---------- */
