@@ -102,18 +102,17 @@ body{
 #clearBtn:hover{background:#a8863f}
 
 /* ===== 4. Banner：古籍残卷圆角 ===== */
-.banner{
+/*.banner{
   position: relative;
   height: 50%;
   overflow: hidden;
   padding:0 5vw 20px;
-}
+}*/
 .banner img{
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  margin-bottom:-4px;
 }
 
 /* ===== 5. 翻转课堂标题：竖排小篆前饰 ===== */
@@ -123,6 +122,7 @@ body{
   margin: 40px 5vw 20px;
   line-height:1;
   position:relative;
+  margin-top: -4px;
 }
 .assignment-title span {
   display:inline-block;
