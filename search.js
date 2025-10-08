@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearBtn    = document.getElementById('clearBtn');
   const resultsBox  = document.getElementById('searchResults');
   const resultsList = document.getElementById('results');
-  const grid        = document.getElementById('assignmentGrid');
 
   /* ---------- 1. 采集可搜索数据 ---------- */
   function collectData() {
@@ -89,8 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-  // ① 隐藏卡片
-  grid.style.display = 'none';
   resultsBox.style.display = 'block';
 }
 
@@ -98,12 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function clearSearch() {
     searchInput.value = '';
     resultsList.innerHTML = '';
-  // ③ 拿掉临时结果
-    const temp = grid.parentNode.querySelector('#searchResults');
-    if (temp && temp !== resultsBox) temp.remove();
-
-  // ④ 恢复卡片
-    grid.style.display = 'grid';
     resultsBox.style.display = 'none';
   }
 
