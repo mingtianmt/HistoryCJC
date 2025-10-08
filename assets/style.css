@@ -110,7 +110,7 @@ body{
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 120px;        /* 离 banner 底边 120px */
+  bottom: 400px;        /* 离 banner 底边 120px */
   height: 0;            /* 不占流，只决定翻转课堂起始线 */
   z-index: 2;
 }
