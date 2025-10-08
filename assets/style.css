@@ -52,11 +52,11 @@ body{
 }
 
 .site-title span:first-child{
-  font-family:'PangMen', serif;
+  font-family:'FangZhengBangShu', serif;
 }
 
 .site-title span:last-child{
-  font-family:'FangZhengBangShu', serif;
+  font-family:"思源黑体","Microsoft YaHei",sans-serif;;
 }
 
 .subtitle{
@@ -101,21 +101,11 @@ body{
 #clearBtn{background:var(--gold)}
 #clearBtn:hover{background:#a8863f}
 
-/* 1. 空壳：高度 0，后面内容认它当“原点” */
-.result-wrapper {
-  position: relative;   /* 让 absolute 子元素可定位（可选） */
-  height: 0;            /* 关键：不占高度 */
-  overflow: visible;    /* 允许子元素溢出显示 */
-}
-
-/* 2. 真实结果：负 margin 随意往上提 */
-.result-inner {
-  margin-top: -350px;   /* 你想提多少就写多少 */
-  background: #fffef9;
-  border: 1px solid var(--theme-red);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
+/* 让结果块自然占高度，不要任何上移 */
+#searchResults {
+  padding: 0 5vw 20px;   /* 左右留空，底留一点呼吸 */
+  display: none;         /* JS 控制显隐即可 */
+  /* 把以前写的 margin-top: -xxxpx 统统删掉！ */
 }
 
 /* ===== 4. Banner：古籍残卷圆角 ===== */
