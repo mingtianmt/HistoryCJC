@@ -46,12 +46,12 @@ body{
   padding:18px 5vw;
 }
 .site-title{
-  letter-spacing:4px;
+  letter-spacing:3px;
   color:var(--theme-red);
 }
 
 .site-title span:first-child{
-  font-size:35px;
+  font-size:40px;
   font-family:'FangZhengBangShu', serif;
 }
 
@@ -145,7 +145,7 @@ body{
 }
 .assignment-title span:last-child {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
+  font-size: 25px;
   color: var(--theme-gray);
 }
 
@@ -355,7 +355,7 @@ body{
 }
 .section-title span:last-child{
   font-family:'Times New Roman', Times, serif;
-  font-size:30px;
+  font-size:25px;
   color:var(--theme-gray);
 }
 
