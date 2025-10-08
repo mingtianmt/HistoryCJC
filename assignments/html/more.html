@@ -20,7 +20,8 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{
       font-family:"思源黑体","Microsoft YaHei",sans-serif;
-      background: #F5F2E8 url('background.jpg') center/cover;
+      background: #F5F2E8 url('../assets/background.jpg') center/cover;
+      background-attachment: fixed;   /* 想固定就保留 */
       color:var(--ink);
       padding-top:100px;          /* 为固定 header 让位 */
       line-height:1.8;
@@ -76,40 +77,40 @@
       opacity:.15;
     }
 
-    /* ---------- 5. 作业卡片：宣纸活字悬浮 ---------- */
-    .assignment-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:24px;
+    /* ---------- 5. 作业目录 ---------- */
+    .catalog-list {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 5vw 60px;
+      list-style: none;
+      border-left: 2px solid var(--cinnabar); /* 朱砂栏线 */
+      padding-left: 1.2em;
     }
-    .assignment-card{
-      background:#fffef9;
-      border:1px solid var(--cinnabar);
-      border-radius:var(--radius);
-      padding:30px 20px;
-      box-shadow:var(--shadow);
-      transition:transform .3s,box-shadow .3s;
-      display:flex;
-      flex-direction:column;
+    .catalog-list li {
+      margin: 10px 0;
+      font-size: 17px;
+      line-height: 1.9;
+      position: relative;
     }
-    .assignment-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 8px 20px rgba(0,0,0,.12);
+    .catalog-list li::before { /* 小朱砂圆点 */
+      content: '';
+      position: absolute;
+      left: -0.6em;
+      top: 0.7em;
+      width: 6px;
+      height: 6px;
+      background: var(--cinnabar);
+      border-radius: 50%;
     }
-    .assignment-card a{
-      text-decoration:none;
-      color:var(--cinnabar);
-    }
-    .assignment-card h3{
-      font-size:18px;
-      margin-bottom:12px;
-      line-height:1.5;
+    .catalog-list a {
       color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all .3s;
     }
-    .assignment-card p{
-      font-size:14px;
-      color:#444;
-      flex:1;
+    .catalog-list a:hover {
+      color: var(--cinnabar);
+      border-bottom-color: var(--cinnabar);
     }
 
     /* ---------- 6. 响应式 ---------- */
@@ -150,103 +151,40 @@
   <div class="more-wrapper">
     <h2 class="section-title">翻转课堂：精选研讨成果</h2>
 
-    <div class="assignment-grid">
-      <!-- 1 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/A.pdf" target="_blank">
-          <h3>晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</h3>
-        </a>
-        <p>梁启超对“新报”的认识不仅体现了他个人对中国社会变革的理解，也反映了当时中国知识分子对西方自由主义思想的学习与接受。</p>
-      </article>
-
-      <!-- 2 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/B.pdf" target="_blank">
-          <h3>近代来华传教士的多重身份：走近美国传教士与“汉学之父”卫三畏（2023-09）</h3>
-        </a>
-        <p>卫三畏在中国四十多年，恪守教职传播福音，积极参与美国对华外交，勤于汉学研究，被成为美国“汉学之父”。</p>
-      </article>
-
-      <!-- 3 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/C.pdf" target="_blank">
-          <h3>近代职业记者群的崛起：烽火玫瑰胡济邦（2024-08）</h3>
-        </a>
-        <p>胡济邦的报道兼具新闻价值与深刻的思想内涵、人文关怀，在苏德战争等重大历史事件中，以亲身经历为基础，传递真实战场情况与国际视野。</p>
-      </article>
-
-      <!-- 4 -->
-      <article class="assignment-card">
-        <a href="../../public/video/D.mp4" target="_blank">
-          <h3>近代职业记者群的崛起：民国女性新闻从业者的困境与出路（2023-02）</h3>
-        </a>
-        <p>女性报人利用创办报刊的方式与封建传统思想抗衡，表达出解放自我的诉求，投身于解放自我的实践。</p>
-      </article>
-
-      <!-- 5 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/E.pdf" target="_blank">
-          <h3>抗战与媒介：抗战烽火中的《重大校刊》（2024-11）</h3>
-        </a>
-        <p>《重大校刊》在抗战烽火中既是重庆大学校园事务、学科发展的“记录者”，也是战时重庆乃至全国救亡运动的“参与者”。</p>
-      </article>
-
-      <!-- 6 -->
-      <article class="assignment-card">
-        <a href="../../public/video/F.mp4" target="_blank">
-          <h3>“重庆解放”的中外媒介叙事框架分析（2023-01）</h3>
-        </a>
-        <p>围绕“重庆解放”这一历史事件，从不同类型媒介的定位差异出发，剖析综合类、专业类、特殊受众类及外文报纸的叙事框架特点。</p>
-      </article>
-
-      <!-- 7 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/G.pdf" target="_blank">
-          <h3>党报理论与实践：博古的党报实践与新闻思想（2020-13）</h3>
-        </a>
-        <p>博古（秦邦宪）的新闻思想以“党性、群众性、战斗性”为核心，主张党报是“党的喉舌”，需以党的立场办事、贯彻群众路线、发挥“笔杆子战争”的舆论战斗作用。</p>
-      </article>
-
-      <!-- 8 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/H.pdf" target="_blank">
-          <h3>党报理论与实践：瞿秋白与《新社会》之探析与思考（2020-11）</h3>
-        </a>
-        <p>瞿秋白是中国无产阶级革命史上最早的新闻记者、新闻史上第一位具有共产主义思想的新闻记者、采访报道苏俄十月革命第一人，是中共新闻事业奠基人之一。</p>
-      </article>
-
-      <!-- 9 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/I.pdf" target="_blank">
-          <h3>报刊与体育救国论：奥运首秀与中国报界的“体育救国”思潮 （2024-06）</h3>
-        </a>
-        <p>刘长春首次将中国运动员旗帜插上奥运舞台，中国媒体通过报道激发民族精神，连接体育与国家尊严、民族情感。</p>
-      </article>
-
-      <!-- 10 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/J.pdf" target="_blank">
-          <h3>报刊阅读与市民生活：从传统报刊到新媒体矩阵（2019-10）</h3>
-        </a>
-        <p>报刊始终是连接社会与市民的重要载体，随着新媒体发展，报刊以“纸质+电子”多元形态适应市民生活变化，在信息传播与价值引领中仍具不可替代的作用。</p>
-      </article>
-
-      <!-- 11 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/K.pdf" target="_blank">
-          <h3>见证中国革命的西方记者：“密苏里新闻帮”——活跃在近代中国西方新闻力量（2024-02）</h3>
-        </a>
-        <p>“密苏里新闻帮”是20世纪初一批具有美国密苏里背景，活跃在中国的新闻记者群体，强调新闻客观性、真实性与专业性，注重实践与伦理。</p>
-      </article>
-
-      <!-- 12 -->
-      <article class="assignment-card">
-        <a href="../../public/pdf/L.pdf" target="_blank">
-          <h3>见证中国革命的西方记者：史沫特莱的来华初衷与报道成果（2024-14）</h3>
-        </a>
-        <p>史沫特莱将一生献给中国人民的解放事业，是记录中国革命的“西方记者”，更是与中国共产党、中国人民结下深厚友谊的国际战士。</p>
-      </article>
-    </div>
+    <ol class="catalog-list">
+      <li><a href="../../public/pdf/A.pdf" target="_blank">晚清报人的新闻思想与政治实践：梁启超的“新报”论（2024-01）</a></li>
+      <li><a href="../../public/pdf/B.pdf" target="_blank">近代来华传教士的多重身份：走近美国传教士与“汉学之父”卫三畏（2023-09）</a></li>
+      <li><a href="../../public/pdf/C.pdf" target="_blank">近代职业记者群的崛起：烽火玫瑰胡济邦（2024-08）</a></li>
+      <li><a href="../../public/video/D.mp4" target="_blank">近代职业记者群的崛起：民国女性新闻从业者的困境与出路（2023-02）</a></li>
+      <li><a href="../../public/pdf/E.pdf" target="_blank">抗战与媒介：抗战烽火中的《重大校刊》（2024-11）</a></li>
+      <li><a href="../../public/video/F.mp4" target="_blank">“重庆解放”的中外媒介叙事框架分析（2023-01）</a></li>
+      <li><a href="../../public/pdf/G.pdf" target="_blank">党报理论与实践：博古的党报实践与新闻思想（2020-13）</a></li>
+      <li><a href="../../public/pdf/H.pdf" target="_blank">党报理论与实践：瞿秋白与《新社会》之探析与思考（2020-11）</a></li>
+      <li><a href="../../public/pdf/I.pdf" target="_blank">报刊与体育救国论：奥运首秀与中国报界的“体育救国”思潮（2024-06）</a></li>
+      <li><a href="../../public/pdf/J.pdf" target="_blank">报刊阅读与市民生活：从传统报刊到新媒体矩阵（2019-10）</a></li>
+      <li><a href="../../public/pdf/K.pdf" target="_blank">见证中国革命的西方记者：“密苏里新闻帮”（2024-02）</a></li>
+      <li><a href="../../public/pdf/L.pdf" target="_blank">见证中国革命的西方记者：史沫特莱的来华初衷与报道成果（2024-14）</a></li>
+      <li><a href="../../public/pdf/M.pdf" target="_blank">报刊与体育救国论：1932年刘长春参加洛杉矶奥运会报道与“体育救国”思潮（2024-05）</a></li>
+      <li><a href="../../public/pdf/N.pdf" target="_blank">报刊阅读与市民生活：从《良友》画报中看近代中国社会生活的变迁（2019-13）</a></li>
+      <li><a href="../../public/pdf/O.pdf" target="_blank">党报理论与实践：被遗忘的新闻巨擎秦邦宪（2019-15）</a></li>
+      <li><a href="../../public/PDF/P.pdf" target="_blank">党报理论与实践：大跃进时期的”舆论“之论（2020-18）</a></li>
+      <li><a href="../../public/pdf/Q.pdf" target="_blank">党报理论与实践：大跃进时期的《人民日报》的报道特征与成因（2019-07）</a></li>
+      <li><a href="../../public/pdf/R.pdf" target="_blank">见证中国革命的西方记者：“密苏里新闻帮”与中国的对外宣传（2024-12）</a></li>
+      <li><a href="../../public/pdf/S.pdf" target="_blank">见证中国革命的西方记者：埃德加·斯诺与同时期西方来华记者群（2023-04）</a></li>
+      <li><a href="../../public/vodeo/T.mp4" target="_blank">见证中国革命的西方记者：世界上第一双了解中国革命的眼睛——埃德加·斯诺（2023-04）</a></li>
+      <li><a href="../../public/video/U.mp4" target="_blank">见证中国革命的西方记者：西方来华记者史沫特莱（2023-08）</a></li>
+      <li><a href="../../public/pdf/V.pdf" target="_blank">近代职业记者群的崛起：“尽了几分天职”的女记者浦熙修（2023-10）</a></li>
+      <li><a href="../../public/pdf/W.pdf" target="_blank">近代职业记者群的崛起：“说人话说真话”的记者林白水研究综述(2020-04)</a></li>
+      <li><a href="../../public/pdf/X.pdf" target="_blank">近代职业记者群的崛起：中国首位战地女记者——张郁廉（2020-16）</a></li>      
+      <li><a href="../../public/pdf/Y.pdf" target="_blank">抗战与媒介：抗战时期中国共产党的宣传策略（2024-10）</a></li>
+      <li><a href="../../public/pdf/Z.pdf" target="_blank">抗战与媒介：抗战时期中国共产党在国统区的宣传策略（2020-14）</a></li>
+      <li><a href="../../public/pdf/AA.pdf" target="_blank">抗战与媒介：重庆大轰炸中的《重庆各报联合报》发行与终结探讨（2020-7）</a></li>
+      <li><a href="../../public/pdf/AB.pdf" target="_blank">女性与报刊：民国时期宋美龄媒介形象探讨（2020-03）</a></li>
+      <li><a href="../../public/pdf/AC.pdf" target="_blank">女性与报刊：晚清民国时期女性报刊发展评述（2020-05）</a></li>
+      <li><a href="../../public/pdf/AD.pdf" target="_blank">晚清报人的新闻思想与政治实践：康有为与梁启超的新闻思想比较（2019-12）</a></li>
+      <li><a href="../../public/pdf/AE.pdf" target="_blank">晚清报人的新闻思想与政治实践：王韬的“新报”论（2024-07）</a></li>
+      <li><a href="../../public/pdf/AF.pdf" target="_blank">晚清新旧报刊里的“太平天国”（2024-13）</a></li>
+    </ol>
   </div>
         <!-- 第二课堂部分结束后，添加空白和文本 -->
   <section class="footer-text">
