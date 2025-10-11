@@ -127,6 +127,7 @@
     .movie{
       display:grid;
       grid-template-columns:repeat(3,1fr);   /* 一行三列 */
+      grid-template-rows: repeat(2, auto);
       gap:30px;                              /* 列间距 */
       margin-bottom:60px;
     }
@@ -150,6 +151,9 @@
       font-size:15px;
       color:var(--ink);
     }
+
+    .line2-left   { grid-column: 1 / 2; }   /* 第二行第一列 */
+    .line2-center { grid-column: 2 / 3; }   /* 第二行第二列 */
 
     /* ---------- 6. 响应式 ---------- */
     @media(max-width:1024px){
@@ -277,15 +281,23 @@
     <div class="movie">
       <div class="item">
         <img src="../assets/movie1.jpg" alt="影片1">
-        <div class="desc">浪潮</div>
+        <div class="desc">《一份报纸的抗战》（大公报）</div>
       </div>
       <div class="item">
         <img src="../assets/movie2.jpg" alt="影片2">
-        <div class="desc">我的1919</div>
+        <div class="desc">《烽火木刻》第六集《凝望》</div>
       </div>
       <div class="item">
         <img src="../assets/movie3.jpg" alt="影片3">
-        <div class="desc">觉醒年代</div>
+        <div class="desc">《觉醒年代》</div>
+      </div>
+      <div class="item line2-left">
+        <img src="../assets/movie4.jpg" alt="影片4">
+        <div class="desc">《川盐抗战》（新华日报）</div>
+      </div>      
+      <div class="item line2-center">
+        <img src="../assets/movie5.jpg" alt="影片5">
+        <div class="desc">《抗日战场上的办报人》</div>
       </div>
     </div>
   </main>
