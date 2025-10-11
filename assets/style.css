@@ -321,10 +321,10 @@ body{
 }
 
 /* ===== 8. 响应式：手机竖排 ===== */
-@media(max-width:768px){
+/* @media(max-width:768px){
   .classroom-with-image{flex-direction:column;text-align:center}
   .classroom-image img{width:100%;max-width:300px}
-}
+} */
 /* ===== 9. 标题下方渐变线（重点向外淡出） ====*/
 .section-title{
   display:block;
