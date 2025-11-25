@@ -238,6 +238,8 @@ body{
   border-radius: var(--radius);
   box-shadow:var(--shadow);
   padding:3vw 5vw;
+  max-width: 1200px;
+  width: 100%;
 }
 .classroom-with-image{
   display:flex;
@@ -246,7 +248,7 @@ body{
 }
 
 .classroom-image img{
-  width:200px;
+  width:20vw;
   height:auto;
   border-radius:var(--radius);
   box-shadow:0 4px 10px rgba(0,0,0,.1);
