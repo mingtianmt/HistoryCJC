@@ -13,10 +13,10 @@
 }
 
 :root{
-  --theme-red:#9B1D2B;     /* 朱砂红 */
-  --theme-gray:#1E1E1E;    /* 深墨灰 */
-  --paper:#F5F2E8;         /* 古籍纸色 */
-  --gold:#C9A145;          /* 鎏金点缀 */
+  --theme-red:#9B1D2B;
+  --theme-gray:#1E1E1E;
+  --paper:#F5F2E8;
+  --gold:#C9A145;
   --radius:8px;
   --shadow:0 4px 12px rgba(0,0,0,.08);
 }
@@ -25,13 +25,13 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
   font-family:"思源黑体","Microsoft YaHei",sans-serif;
-  background: #F5F2E8 url('background.jpg') center/cover, fixed;
+  background: #F5F2E8 url('background.jpg') center/cover fixed;
   color:var(--theme-red);
   padding-top: 0;
   line-height:1.75;
 }
 
-/* ===== 2. 顶部导航：宣纸卷轴效果 ===== */
+/* ===== 2. 顶部导航 ===== */
 .header{
   background:#fffef9 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity=".04"><rect fill="%239B1D2B" x="0" y="0" width="1" height="100"/></svg>');
   border-bottom:2px solid var(--theme-red);
@@ -40,27 +40,12 @@ body{
   flex-direction:column;
   padding:18px 5vw;
 }
-.site-title{
-  letter-spacing:1.5px;
-  color:var(--theme-red);
-}
-.site-title span:first-child{
-  font-size:42px;
-  font-family:'FangZhengBangShu', serif;
-}
-.site-title span:last-child{
-  font-size:25px;
-  font-family:'Times New Roman', Times, serif;
-}
-.subtitle{
-  align-self:flex-end;
-  font-size:16px;
-  color:var(--theme-red);
-  opacity:.8;
-  margin-top:4px;
-}
+.site-title{letter-spacing:1.5px;color:var(--theme-red);}
+.site-title span:first-child{font-size:42px;font-family:'FangZhengBangShu', serif;}
+.site-title span:last-child{font-size:25px;font-family:'Times New Roman', Times, serif;}
+.subtitle{align-self:flex-end;font-size:16px;color:var(--theme-red);opacity:.8;margin-top:4px;}
 
-/* ===== 3. 搜索：宣纸圆角 ===== */
+/* ===== 3. 搜索区域（关键修改：背景图随缩放收窄） ===== */
 .search-section{
   max-width: 1200px;                    /* 和主要内容宽度一致 */
   margin: 0 auto;                       /* 水平居中 */
@@ -116,7 +101,7 @@ body{
   margin-bottom:-4px;
 }
 
-/* ===== 5. 翻转课堂标题 ===== */
+/* ===== 5. 翻转课堂标题（关键修改：完全响应页面缩放比例） ===== */
 .assignment-title {
   display: block;
   text-align: center;
@@ -129,22 +114,23 @@ body{
 }
 .assignment-title span:first-child {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 3vw;
+  font-size: 1em;                /* 继承父级，完美缩放 */
   color: var(--theme-red);
   margin-right: 0.3em;
 }
 .assignment-title span:last-child {
   font-family: 'Times New Roman', Times, serif;
-  font-size: 2.5vw;
-  color:var(--theme-gray);
+  font-size: 0.85em;             /* 比主标题略小 */
+  color: var(--theme-gray);
 }
 .assignment-title::after {
   content: "";
   display: block;
   height: 4px;
   width: 25vw;
-  margin: 8px auto 0;
-  background:linear-gradient(to right,transparent,var(--theme-red) 35%,var(--theme-red) 65%,transparent);
+  max-width: 360px;
+  margin: 12px auto 0;
+  background: linear-gradient(to right,transparent,var(--theme-red) 35%,var(--theme-red) 65%,transparent);
   border-radius: 2px;
 }
 .assignment-more{
@@ -157,7 +143,8 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-/* ===== 6. 作业卡片 ===== */
+
+/* ===== 6. 作业卡片网格 ===== */
 .assignment-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -190,59 +177,36 @@ body{
   box-shadow:0 8px 20px rgba(0,0,0,.12);
 }
 .assignment-card:hover::before{transform:scaleY(1)}
-.assignment-card h3{
-  font-size:18px;
-  margin-bottom:12px;
-  color:var(--theme-gray);
-}
-.assignment-card p{
-  font-size:15px;
-  color:#555;
-  margin-bottom:12px;
-}
-.more-link{
-  display:inline-block;
-  margin-top:8px;
-  color:var(--theme-red);
-  font-weight:bold;
-  text-decoration:none;
-  border-bottom:2px solid transparent;
-  transition:.3s;
-}
+.assignment-card h3{font-size:18px;margin-bottom:12px;color:var(--theme-gray);}
+.assignment-card p{font-size:15px;color:#555;margin-bottom:12px;}
+.more-link{display:inline-block;margin-top:8px;color:var(--theme-red);font-weight:bold;text-decoration:none;border-bottom:2px solid transparent;transition:.3s;}
 .more-link:hover{border-bottom-color:var(--theme-red)}
 
-/* ===== 7. 第一课堂 & 第二课堂（关键修改：真实红框 + 随页面缩放同步） ===== */
+/* ===== 7. 第一 & 第二课堂（已完美缩放） ===== */
 .flipped-classroom{
   position: relative;
-  max-width: 1200px;                  /* 与翻转课堂卡片最大宽度一致 */
-  margin: 60px auto;                  /* 上下间距 + 水平居中 */
+  max-width: 1200px;
+  margin: 60px auto;
   padding: 60px 5vw;
   background: #fffef9;
-  border: 2px solid var(--theme-red); /* 真实边框，缩放时完美同步 */
+  border: 2px solid var(--theme-red);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-
-/* 删除所有旧的伪元素红线 */
 .flipped-classroom::before,
-.flipped-classroom::after {
-  display: none !important;
-}
+.flipped-classroom::after {display: none !important;}
 
 .flipped-classroom .classroom-with-image {
   display: flex;
   gap: 3vw;
   align-items: center;
 }
-
 .classroom-image img{
   width:200px;
   height:auto;
   border-radius:var(--radius);
   box-shadow:0 4px 10px rgba(0,0,0,.1);
 }
-
-/* 标题样式 */
 .classroom-content h2 span:first-child{
   font-family:'PangMen',serif;
   font-size:3vw;
@@ -260,15 +224,13 @@ body{
   margin:0 0 20px 0;
 }
 .classroom-content h2::after{
-  content: "";
-  flex: 1;
-  height: 4px;
-  margin-left: 20px;
-  background: linear-gradient(to right, var(--theme-red), transparent);
-  border-radius: 2px;
+  content:"";
+  flex:1;
+  height:4px;
+  margin-left:20px;
+  background:linear-gradient(to right,var(--theme-red),transparent);
+  border-radius:2px;
 }
-
-/* 查看详情按钮 */
 .classroom-content {
   position: relative;
   flex:1;
@@ -281,7 +243,6 @@ body{
   padding: 8px 16px;
   background: var(--theme-red);
   color: #fffef9;
-  font-family: "思源黑体", "Microsoft YaHei", sans-serif;
   font-size: 15px;
   border-radius: var(--radius);
   text-decoration: none;
@@ -290,10 +251,8 @@ body{
 }
 .detail-link:hover {
   background: #7a1621;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
-
-/* 段落加大加粗 */
 .classroom-content p {
   font-size: 16px;
   font-weight: 500;
@@ -301,7 +260,7 @@ body{
   color:#000000;
 }
 
-/* ===== 8. 第一/二课堂标题（大标题） ===== */
+/* ===== 8. 第一/二课堂大标题 ===== */
 .section-title{
   display:block;
   text-align:center;
@@ -321,31 +280,24 @@ body{
   color:var(--theme-gray);
 }
 .section-title::after {
-  content: "";
-  display: block;
-  height: 3px;
-  width: 140px;
-  margin: 8px auto 0;
-  background: linear-gradient(to right,transparent,var(--theme-red) 35%,var(--theme-red) 65%,transparent);
-  border-radius: 2px;
+  content:"";
+  display:block;
+  height:3px;
+  width:140px;
+  margin:8px auto 0;
+  background:linear-gradient(to right,transparent,var(--theme-red) 35%,var(--theme-red) 65%,transparent);
+  border-radius:2px;
 }
 
 /* ===== 9. 响应式 ===== */
 @media (max-width: 768px) {
-  .flipped-classroom .classroom-with-image {
-    flex-direction: column;
-    text-align: center;
-  }
-  .classroom-image img {
-    width: 100%;
-    max-width: 300px;
-  }
-  .flipped-classroom {
-    padding: 40px 6vw;
-    margin: 40px auto;
-  }
+  .flipped-classroom .classroom-with-image {flex-direction: column;text-align: center;}
+  .classroom-image img {width: 100%;max-width: 300px;}
+  .flipped-classroom {padding: 40px 6vw;margin: 40px auto;}
   .classroom-content h2 span:first-child {font-size: 9vw;}
   .classroom-content h2 span:last-child {font-size: 7vw;}
+  .assignment-title {font-size: calc(2rem + 4vw);margin-top: -100px;}
+  .search-section {padding: 30px 6vw;border-radius: 0;}
 }
 
 /* ===== 10. 底部文字 ===== */
