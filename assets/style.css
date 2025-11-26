@@ -146,8 +146,8 @@ body{
 /* ===== 6. 作业卡片网格 ===== */
 .assignment-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:28px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
   max-width:var(--max-width);
   margin:0 auto 80px;
   padding:0 40px;
