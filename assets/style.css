@@ -95,9 +95,17 @@ body{
   display:none;
 }
 
-/* ===== 4. Banner ===== */
-.banner img{width:100%;display:block;margin-bottom:-4px;}
-
+/* ===== 4. 装饰 Banner（paper.jpg 随页面缩放完美同步） ===== */
+.banner{
+  max-width: var(--max-width);   /* 关键一行 */
+  margin: 0 auto;                /* 关键一行 */
+  overflow: hidden;
+}
+.banner img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
 /* ===== 5. 翻转课堂标题（关键修复：完全随页面缩放） ===== */
 .assignment-title{
   max-width:var(--max-width);
