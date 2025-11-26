@@ -109,8 +109,7 @@ body{
   line-height: 1;
   position: relative;
   margin-top: -200px;
-  /* 改为用 rem + calc 实现完美缩放 */
-  font-size: calc(2.8rem + 2vw);
+  font-size: 0;
 }
 .assignment-title span:first-child {
   font-family: 'Times New Roman', Times, serif;
