@@ -337,16 +337,3 @@ body{
   line-height: 2.0;
   color:#000000;
 }
-
-/* ===== 12. 整体等比缩放：≤基准宽度时启用 ===== */
-@media (max-width: 1040px) {
-  html {
-    font-size: calc(100vw / var(--base-width) * 16px);
-  }
-  body {
-    transform-origin: top left;
-    transform: scale(calc(100vw / var(--base-width)));
-    width: var(--base-width);
-    overflow-x: hidden;
-  }
-}
