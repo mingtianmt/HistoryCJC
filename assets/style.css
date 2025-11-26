@@ -5,11 +5,11 @@
 }
 @font-face{
   font-family:'FZ-LiShu';
-  src:url('https://cdn.jsdelivr.net/npm/@static-fonts/fangzheng-lishu@1.0.0/FangZhengBangShuJianTi-1.ttf  ') format('truetype');
+  src:url('https://cdn.jsdelivr.net/npm/@static-fonts/fangzheng-lishu@1.0.0/FangZhengBangShuJianTi-1.ttf ') format('truetype');
 }
 @font-face{
   font-family: 'PangMen';
-  src: url('https://cdn.jsdelivr.net/npm/pangmen-zhengdao-cushu@1.0.0/PangMenZhengDaoCuShuTi-1.ttf  ') format('truetype');
+  src: url('https://cdn.jsdelivr.net/npm/pangmen-zhengdao-cushu@1.0.0/PangMenZhengDaoCuShuTi-1.ttf ') format('truetype');
 }
 
 :root{
@@ -38,7 +38,7 @@ body{
   /*position:fixed;*/
   /*top:0;left:0;right:0;*/
   /*z-index:999;*/
-  background:#fffef9 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg  " width="100" height="100" opacity=".04"><rect fill="%239B1D2B" x="0" y="0" width="1" height="100"/></svg>');
+  background:#fffef9 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg " width="100" height="100" opacity=".04"><rect fill="%239B1D2B" x="0" y="0" width="1" height="100"/></svg>');
   border-bottom:2px solid var(--theme-red);
   box-shadow:var(--shadow);
   display:flex;
@@ -452,3 +452,5 @@ body{
   line-height: 2.0;     /* 行距也稍微拉开 */
   color:#000000;
 }
+
+
